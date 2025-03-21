@@ -7,6 +7,7 @@
 const defaultParser = require("./default-parser");
 const serterParser = require("./serter-parser");
 const studentParser = require("./student-parser");
+const { validateAndNormalize } = require("./schema");
 
 // Create a registry object with all available parsers
 const parsers = {
@@ -43,11 +44,18 @@ function listParsers() {
  * Parse a resume with a specific parser
  * @param {string} resumeFilePath - Path to the resume file
  * @param {string} parserName - Name of the parser to use (optional, uses default if not specified)
- * @returns {Promise<Object>} - The parsed resume data
+ * @returns {Promise<Object>} - The parsed resume data, validated and normalized according to the schema
  */
 async function parseResume(resumeFilePath, parserName = "default") {
   const parser = getParser(parserName);
-  return await parser.parse(resumeFilePath);
+
+  // Get the raw parsed data from the parser
+  const rawParsedData = await parser.parse(resumeFilePath);
+
+  // Validate and normalize the data according to our schema
+  const normalizedData = validateAndNormalize(rawParsedData);
+
+  return normalizedData;
 }
 
 module.exports = {
