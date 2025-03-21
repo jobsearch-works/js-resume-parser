@@ -1,0 +1,231 @@
+{
+  "name": "Serter I.",
+  "title": "Details",
+  "email": "serteriyigunlu@hotmail.com",
+  "phone": "0405 636 970",
+  "linkedin": "",
+  "github": "",
+  "location": "Details",
+  "summary": "Pro,cient in various platforms  languages  and embedded systems. Experienced with the latest cutting edge development tools and procedures. - Able to effectively selfKmanage during independent projects  as well as collaborate as part of a productive team. •nowledgeable in user interface  testing  and debugging processes. Bringing",
+  "experience": [
+    {
+      "title": "Manager, Airport Kebabs, Brisbane",
+      "company": "",
+      "location": "",
+      "period": "",
+      "responsibilities": [
+        "N Qq E M B E R   + 0 2 4   z   N Qq E M B E R   + 0 2 6",
+        "TMaximised performance by monitoring daily activities and mentoring team",
+        "members.",
+        "TQnboarded new employees with training and new hire documentation.",
+        "TDeveloped and maintained relationships with customers and suppliers through",
+        "account development.",
+        "T'ontrolled labour hours and inventory costs through handsKon management",
+        "and proactive changes."
+      ]
+    },
+    {
+      "title": "Mechanical Engineer, Alkon Energy, Izmir",
+      "company": "",
+      "location": "",
+      "period": "",
+      "responsibilities": [
+        "F E B RUA R O   + 0 2 +   z   N Qq E M B E R   + 0 2 +"
+      ]
+    },
+    {
+      "title": "TWrote and revised maintenance procedures.",
+      "company": "",
+      "location": "",
+      "period": "",
+      "responsibilities": [
+        "T'onducted research to test and analyse feasibility  design  operation and",
+        "performance of eIuipment  components  and systems.",
+        "TReviewed technical drawings developed by 'AD technicians and drafters."
+      ]
+    },
+    {
+      "title": "Mechanical Engineer, Turkish Airlines, Istanbul",
+      "company": "",
+      "location": "",
+      "period": "",
+      "responsibilities": [
+        "D E ' E M B E R   + 0 2 0   z   JA N UA R O   + 0 2 +",
+        "TProduced and maintained well documented programs.",
+        "T'ourse organisation for aircraft technicians."
+      ]
+    },
+    {
+      "title": "TPreparation Jying technicians schedule.",
+      "company": "",
+      "location": "",
+      "period": "",
+      "responsibilities": [
+        "TPrepare aircraft technicians licence  adding aircraft types certi,cates  preparing",
+        "application forms."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Diploma of IT(Web Development), Coder Academy, Australia",
+      "institution": "+ 0 + +   z   + 0 + 3",
+      "location": "",
+      "period": "",
+      "details": []
+    },
+    {
+      "degree": "Master of Engineering (Research Degree), Queensland University of",
+      "institution": "Technology, Brisbane",
+      "location": "",
+      "period": "",
+      "details": [
+        "+ 0 2 3   z   + 0 2 5"
+      ]
+    },
+    {
+      "degree": "Diploma of Business Management, Martin College, Brisbane",
+      "institution": "+ 0 0 7   z   + 0 0 7",
+      "location": "",
+      "period": "",
+      "details": []
+    },
+    {
+      "degree": "Diploma of Aircraft Maintenance Engineering, Aviation Australia, Brisbane",
+      "institution": "+ 0 0 6   z   + 0 0 7",
+      "location": "",
+      "period": "",
+      "details": []
+    },
+    {
+      "degree": "Bachelor of Engineer, Celal Bayar University, Manisa",
+      "institution": "",
+      "location": "",
+      "period": "",
+      "details": []
+    }
+  ],
+  "skills": [],
+  "projects": [
+    {
+      "name": "MERN  Recipe App, Brisbane",
+      "timeframe": "",
+      "description": []
+    },
+    {
+      "name": "TYhis projects is a recipe app .",
+      "timeframe": "",
+      "description": []
+    },
+    {
+      "name": "TOou can log in the site to see and add recipes.",
+      "timeframe": "",
+      "description": []
+    },
+    {
+      "name": "TOou can delete add  change your recipes after logKin.",
+      "timeframe": "",
+      "description": []
+    },
+    {
+      "name": "TOou can write comments on others recipes after log Kin.",
+      "timeframe": "",
+      "description": []
+    },
+    {
+      "name": "TBuilt in MERN.",
+      "timeframe": "",
+      "description": []
+    },
+    {
+      "name": "Tavel Log Full Stack Application",
+      "timeframe": "",
+      "description": []
+    },
+    {
+      "name": "TQur Yravelog app is a dynamic platform designed to bring travelers and explorers",
+      "timeframe": "",
+      "description": [
+        "together by allowing them to share their travel experiences."
+      ]
+    },
+    {
+      "name": "TIts core purpose is to create a community of passionate travelers and to build a",
+      "timeframe": "",
+      "description": [
+        "comprehensive database of travel experiences."
+      ]
+    },
+    {
+      "name": "TMERN stack MongoDB  a NoSCL database Express.js streamlines serverKside",
+      "timeframe": "",
+      "description": [
+        "coding  and Node.js provides a robust environment for serverKside JavaScript",
+        "execution  which should mean our app is both fast and scalable. Furthermore"
+      ]
+    },
+    {
+      "name": "React.js  known for its componentKbased architecture and ef,cient rendering",
+      "timeframe": "",
+      "description": [
+        "which will allow us to create a userKfriendly  ef,cient interface that helps users",
+        "enjoy a positive user experience."
+      ]
+    },
+    {
+      "name": "Guess Number Game",
+      "timeframe": "",
+      "description": []
+    },
+    {
+      "name": "TYhis project is a game about guessing 4 digits number.",
+      "timeframe": "",
+      "description": [
+        "T'omputer generates 4 digits number (First digit can not be 0 and all digits are",
+        "different)  and the user try1s to guess the number.",
+        "TEg. computer chose 2+34 and you guessed 2456  output would be —2  K2 because",
+        "you did guess correct two digits but one of them is in the correct position and the",
+        "other is not."
+      ]
+    },
+    {
+      "name": "TBuilt with Python.",
+      "timeframe": "",
+      "description": []
+    },
+    {
+      "name": "Inventory Tracker",
+      "timeframe": "",
+      "description": []
+    },
+    {
+      "name": "TYhis project was about creating an inventory list.",
+      "timeframe": "",
+      "description": []
+    },
+    {
+      "name": "TBuilt with JavaScript and React.",
+      "timeframe": "",
+      "description": []
+    },
+    {
+      "name": "Rental Management",
+      "timeframe": "",
+      "description": []
+    },
+    {
+      "name": "TYhis project was about rental managament. It relies on data management only.",
+      "timeframe": "",
+      "description": []
+    },
+    {
+      "name": "TUsers can provide feedback or enter complaints about any rental place that they",
+      "timeframe": "",
+      "description": [
+        "have lived."
+      ]
+    }
+  ],
+  "honors": [],
+  "references": []
+}

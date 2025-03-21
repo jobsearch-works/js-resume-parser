@@ -10,7 +10,8 @@ A JavaScript tool for parsing resume files (PDF format) and extracting structure
     - Email address
     - Phone number
     - LinkedIn profile
-    - Address
+    - GitHub profile
+    - Location/Address
   - Professional Experience:
     - Company names
     - Job titles
@@ -25,9 +26,18 @@ A JavaScript tool for parsing resume files (PDF format) and extracting structure
     - Technical skills
     - Languages
     - Certifications
+  - Projects:
+    - Project names
+    - Timeframes
+    - Descriptions
+  - Honors & Awards:
+    - Titles
+    - Dates
+    - Descriptions
 - Multiple specialized parsers for different resume formats:
   - General-purpose parser
   - Serter format parser
+  - Modern Student format parser
   - Universal parser that runs all parsers on all resumes
 - Automatically processes all PDF files in the 'resumes' directory
 - Saves parsed results as JSON files in the 'parsed' directory
@@ -41,7 +51,7 @@ The system follows a modular architecture with a clear separation of concerns:
 
 1. **Parser Modules**:
 
-   - Each parser (`resumeParser.js`, `serterParser.js`) is responsible only for extracting and structuring data
+   - Each parser (`resumeParser.js`, `serterParser.js`, `resumeParser1.js`) is responsible only for extracting and structuring data
    - Parsers implement specialized logic for different resume formats
    - Parsers return structured JSON data without writing to disk
 
@@ -102,6 +112,18 @@ or
 node serterParser.js
 ```
 
+### Modern Student Format Parser
+
+```
+npm run student
+```
+
+or
+
+```
+node resumeParser1.js
+```
+
 ### Universal Parser (Recommended)
 
 Runs all available parsers on all resumes:
@@ -153,6 +175,7 @@ The parsers generate the following files in separate directories:
 
    - `parsed/default-parser/`: Results from the general-purpose parser
    - `parsed/serter-parser/`: Results from the Serter format parser
+   - `parsed/student-parser/`: Results from the Modern Student format parser
 
 2. **Statistics files** with parser comparisons:
 
@@ -161,6 +184,27 @@ The parsers generate the following files in separate directories:
      and a recommendation for which parser works best for that resume
 
 3. If any content cannot be parsed properly, **missing content files** will be created in the same directories containing text from the resume that wasn't captured in the structured output.
+
+## Specialized Parsers
+
+### General-purpose Parser
+
+The default parser handles a wide variety of resume formats with a balanced approach to extracting information.
+
+### Serter Format Parser
+
+Optimized for resumes following the Serter format, with better handling of section-based information and professional experience extraction.
+
+### Modern Student Format Parser
+
+Specialized for student and recent graduate resumes with enhanced capabilities for:
+
+- Multiple phone number formats
+- Project information extraction
+- GitHub profile detection
+- Honors and awards recognition
+- Educational achievements
+- Flexible location detection
 
 ## Verification System
 

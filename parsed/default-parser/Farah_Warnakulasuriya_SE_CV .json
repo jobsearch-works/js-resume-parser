@@ -160,9 +160,5 @@
     "API rate limiting"
   ],
   "languages": [],
-  "certifications": [],
-  "verificationResults": {
-    "missingContent": [],
-    "coveragePercentage": 100
-  }
+  "certifications": []
 }

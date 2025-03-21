@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const { listParsers } = require("./parsers");
+const { verifyParsedContent } = require("./verificationUtils");
 
 /**
  * Main function to generate statistics for all parsed resume files
@@ -20,11 +22,23 @@ async function generateParserStats() {
       fs.mkdirSync(statsDir);
     }
 
-    // Get parser directories
-    const defaultParserDir = path.join(parsedDir, "default-parser");
-    const serterParserDir = path.join(parsedDir, "serter-parser");
+    // Get all available parsers from registry
+    const availableParsers = listParsers();
 
-    if (!fs.existsSync(defaultParserDir) && !fs.existsSync(serterParserDir)) {
+    // Validate parser directories exist
+    let parserDirectoriesExist = false;
+    const parserDirs = {};
+
+    for (const parser of availableParsers) {
+      const parserDir = path.join(parsedDir, `${parser.name}-parser`);
+      parserDirs[parser.name] = parserDir;
+
+      if (fs.existsSync(parserDir)) {
+        parserDirectoriesExist = true;
+      }
+    }
+
+    if (!parserDirectoriesExist) {
       console.error(
         "Error: No parser output directories found. Run the parsers first."
       );
@@ -34,23 +48,26 @@ async function generateParserStats() {
     console.log("Generating statistics for parsed resume files...");
     console.log("--------------------------------------------------");
 
-    // Get all parsed files from default parser
-    const defaultParsedFiles = fs.existsSync(defaultParserDir)
-      ? fs
-          .readdirSync(defaultParserDir)
+    // Get parsed files from each parser
+    const parsedFilesByParser = {};
+    const allFilenames = new Set();
+
+    for (const parser of availableParsers) {
+      const parserDir = parserDirs[parser.name];
+      if (fs.existsSync(parserDir)) {
+        const parsedFiles = fs
+          .readdirSync(parserDir)
           .filter((file) => file.endsWith(".json"))
-      : [];
+          .map((file) => file.replace(".json", ""));
 
-    // Get all parsed files from Serter parser
-    const serterParsedFiles = fs.existsSync(serterParserDir)
-      ? fs.readdirSync(serterParserDir).filter((file) => file.endsWith(".json"))
-      : [];
+        parsedFilesByParser[parser.name] = parsedFiles;
 
-    // Get unique resume filenames from both parsers
-    const allFilenames = new Set([
-      ...defaultParsedFiles.map((file) => file.replace(".json", "")),
-      ...serterParsedFiles.map((file) => file.replace(".json", "")),
-    ]);
+        // Add filenames to the set of all filenames
+        parsedFiles.forEach((file) => allFilenames.add(file));
+      } else {
+        parsedFilesByParser[parser.name] = [];
+      }
+    }
 
     console.log(`Found ${allFilenames.size} parsed resume files to analyze`);
 
@@ -65,50 +82,50 @@ async function generateParserStats() {
         parsers: {},
       };
 
-      // Get the original file size if possible
+      // Get the original file path and text
       const resumePath = path.join(__dirname, "resumes", `${fileName}.pdf`);
+      let originalText = "";
       if (fs.existsSync(resumePath)) {
         resumeStats.fileSize = getFileSizeInKB(resumePath);
+
+        try {
+          const dataBuffer = fs.readFileSync(resumePath);
+          const pdfData = await require("pdf-parse")(dataBuffer);
+          originalText = pdfData.text;
+        } catch (error) {
+          console.error(`Error reading original text: ${error.message}`);
+        }
       }
 
-      // Process default parser results
-      const defaultJsonPath = path.join(defaultParserDir, `${fileName}.json`);
-      if (fs.existsSync(defaultJsonPath)) {
-        try {
-          const defaultResult = JSON.parse(
-            fs.readFileSync(defaultJsonPath, "utf8")
-          );
-          console.log("Default parser results found");
-          resumeStats.parsers["default"] = collectParserStats(defaultResult);
-        } catch (error) {
-          console.error(
-            `Error reading default parser results: ${error.message}`
-          );
-          resumeStats.parsers["default"] = { error: error.message };
-        }
-      } else {
-        console.log("No default parser results found");
-        resumeStats.parsers["default"] = { error: "No results available" };
-      }
+      // Process results from each parser
+      for (const parser of availableParsers) {
+        const jsonPath = path.join(parserDirs[parser.name], `${fileName}.json`);
 
-      // Process Serter parser results
-      const serterJsonPath = path.join(serterParserDir, `${fileName}.json`);
-      if (fs.existsSync(serterJsonPath)) {
-        try {
-          const serterResult = JSON.parse(
-            fs.readFileSync(serterJsonPath, "utf8")
-          );
-          console.log("Serter parser results found");
-          resumeStats.parsers["serter"] = collectParserStats(serterResult);
-        } catch (error) {
-          console.error(
-            `Error reading Serter parser results: ${error.message}`
-          );
-          resumeStats.parsers["serter"] = { error: error.message };
+        if (fs.existsSync(jsonPath)) {
+          try {
+            const result = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
+            console.log(`${parser.displayName} results found`);
+
+            // Generate verification results if original text is available
+            let verificationResults = null;
+            if (originalText) {
+              verificationResults = verifyParsedContent(originalText, result);
+            }
+
+            resumeStats.parsers[parser.name] = collectParserStats(
+              result,
+              verificationResults
+            );
+          } catch (error) {
+            console.error(
+              `Error reading ${parser.displayName} results: ${error.message}`
+            );
+            resumeStats.parsers[parser.name] = { error: error.message };
+          }
+        } else {
+          console.log(`No ${parser.displayName} results found`);
+          resumeStats.parsers[parser.name] = { error: "No results available" };
         }
-      } else {
-        console.log("No Serter parser results found");
-        resumeStats.parsers["serter"] = { error: "No results available" };
       }
 
       // Save the comparative stats to the stats directory
@@ -127,27 +144,56 @@ async function generateParserStats() {
 /**
  * Collect statistics from parser results
  * @param {Object} result - Parser result object
+ * @param {Object} verificationResults - Optional verification results
  * @returns {Object} - Statistics object
  */
-function collectParserStats(result) {
+function collectParserStats(result, verificationResults) {
   if (!result) return { error: "No result available" };
 
-  return {
+  const stats = {
     name: result.name ? true : false,
     email: result.email ? true : false,
     phone: result.phone ? true : false,
     linkedin: result.linkedin ? true : false,
+    github: result.github ? true : false,
     location: result.location || result.address ? true : false,
     experienceCount: result.experience?.length || 0,
     educationCount: result.education?.length || 0,
     skillsCount: result.skills?.length || 0,
     projectsCount: result.projects?.length || 0,
+    honorsCount: result.honors?.length || 0,
     languagesCount: result.languages?.length || 0,
     certificationsCount: result.certifications?.length || 0,
-    coveragePercentage: result.verificationResults?.coveragePercentage || 0,
-    missingContentCount:
-      result.verificationResults?.missingContent?.length || 0,
   };
+
+  // Add verification results if available
+  if (verificationResults) {
+    stats.coveragePercentage = verificationResults.coveragePercentage || 0;
+    stats.missingContentCount = verificationResults.missingContent?.length || 0;
+  } else {
+    // Check for missing content files as fallback
+    const missingContentPath = path.join(
+      path.dirname(result._filePath || ""),
+      `${path.basename(result._filePath || "", ".json")}_missing_content.txt`
+    );
+
+    stats.coveragePercentage = 0;
+    stats.missingContentCount = 0;
+
+    if (fs.existsSync(missingContentPath)) {
+      try {
+        const content = fs.readFileSync(missingContentPath, "utf8");
+        const lines = content
+          .split("\n")
+          .filter((line) => line.trim().length > 0);
+        stats.missingContentCount = lines.length;
+      } catch (error) {
+        // Ignore errors when trying to read missing content files
+      }
+    }
+  }
+
+  return stats;
 }
 
 /**
@@ -205,6 +251,7 @@ function determineBestParser(parsers) {
     if (stats.email) score += 1;
     if (stats.phone) score += 1;
     if (stats.linkedin) score += 1;
+    if (stats.github) score += 1;
     if (stats.location) score += 1;
 
     // Content count points (0.5 points each)
@@ -212,6 +259,7 @@ function determineBestParser(parsers) {
     score += stats.educationCount * 0.5;
     score += stats.skillsCount * 0.25;
     score += stats.projectsCount * 0.5;
+    score += stats.honorsCount * 0.25;
     score += stats.languagesCount * 0.25;
     score += stats.certificationsCount * 0.25;
 

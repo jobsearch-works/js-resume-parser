@@ -16,6 +16,7 @@ function verifyParsedContent(originalText, parsedData) {
 
   // Normalize text (remove excess whitespace, lowercase, etc.)
   const normalizeText = (text) => {
+    if (!text) return "";
     return text.toLowerCase().replace(/\s+/g, " ").trim();
   };
 
@@ -23,43 +24,83 @@ function verifyParsedContent(originalText, parsedData) {
   let parsedTextContent = "";
 
   // Add basic information
-  parsedTextContent += parsedData.name + " ";
-  parsedTextContent += parsedData.email + " ";
-  parsedTextContent += parsedData.phone + " ";
-  parsedTextContent += parsedData.address + " ";
-  parsedTextContent += parsedData.linkedin + " ";
-  parsedTextContent += parsedData.summary + " ";
+  parsedTextContent += (parsedData.name || "") + " ";
+  parsedTextContent += (parsedData.email || "") + " ";
+  parsedTextContent += (parsedData.phone || "") + " ";
+  parsedTextContent += (parsedData.address || "") + " ";
+  parsedTextContent += (parsedData.linkedin || "") + " ";
+  parsedTextContent += (parsedData.summary || "") + " ";
 
-  // Add experience information
-  parsedData.experience.forEach((exp) => {
-    parsedTextContent += exp.company + " ";
-    parsedTextContent += exp.position + " ";
-    parsedTextContent += exp.period + " ";
-    exp.description.forEach((desc) => {
-      parsedTextContent += desc + " ";
+  // Safely add experience information
+  if (Array.isArray(parsedData.experience)) {
+    parsedData.experience.forEach((exp) => {
+      parsedTextContent += (exp.company || "") + " ";
+      parsedTextContent += (exp.position || "") + " ";
+      parsedTextContent += (exp.period || "") + " ";
+
+      // Use title if position is not available (parser differences)
+      if (exp.title) parsedTextContent += exp.title + " ";
+
+      // Handle different property names for description
+      const descriptions = exp.description || exp.responsibilities || [];
+      if (Array.isArray(descriptions)) {
+        descriptions.forEach((desc) => {
+          parsedTextContent += (desc || "") + " ";
+        });
+      }
     });
-  });
+  }
 
-  // Add education information
-  parsedData.education.forEach((edu) => {
-    parsedTextContent += edu.institution + " ";
-    parsedTextContent += edu.degree + " ";
-    parsedTextContent += edu.period + " ";
-    edu.details.forEach((detail) => {
-      parsedTextContent += detail + " ";
+  // Safely add education information
+  if (Array.isArray(parsedData.education)) {
+    parsedData.education.forEach((edu) => {
+      parsedTextContent += (edu.institution || "") + " ";
+      parsedTextContent += (edu.degree || "") + " ";
+      parsedTextContent += (edu.period || "") + " ";
+
+      // Safely process details if they exist
+      const details = edu.details || [];
+      if (Array.isArray(details)) {
+        details.forEach((detail) => {
+          parsedTextContent += (detail || "") + " ";
+        });
+      }
     });
-  });
+  }
 
-  // Add skills, languages, and certifications
-  parsedData.skills.forEach((skill) => {
-    parsedTextContent += skill + " ";
-  });
-  parsedData.languages.forEach((lang) => {
-    parsedTextContent += lang + " ";
-  });
-  parsedData.certifications.forEach((cert) => {
-    parsedTextContent += cert + " ";
-  });
+  // Safely add skills, languages, and certifications
+  if (Array.isArray(parsedData.skills)) {
+    parsedData.skills.forEach((skill) => {
+      parsedTextContent += (skill || "") + " ";
+    });
+  }
+
+  if (Array.isArray(parsedData.languages)) {
+    parsedData.languages.forEach((lang) => {
+      parsedTextContent += (lang || "") + " ";
+    });
+  }
+
+  if (Array.isArray(parsedData.certifications)) {
+    parsedData.certifications.forEach((cert) => {
+      parsedTextContent += (cert || "") + " ";
+    });
+  }
+
+  // Add projects if they exist (some parsers include this)
+  if (Array.isArray(parsedData.projects)) {
+    parsedData.projects.forEach((project) => {
+      parsedTextContent += (project.name || "") + " ";
+      parsedTextContent += (project.timeframe || "") + " ";
+
+      const descriptions = project.description || [];
+      if (Array.isArray(descriptions)) {
+        descriptions.forEach((desc) => {
+          parsedTextContent += (desc || "") + " ";
+        });
+      }
+    });
+  }
 
   // Normalize the concatenated parsed content
   const normalizedParsedContent = normalizeText(parsedTextContent);
@@ -124,7 +165,7 @@ function saveVerificationResults(verificationResults, outputPath, fileName) {
   }
 
   if (
-    verificationResults.missingContent &&
+    verificationResults?.missingContent &&
     verificationResults.missingContent.length > 0
   ) {
     console.log("\nPotentially missing content detected:");

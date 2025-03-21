@@ -1,10 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const pdfParse = require("pdf-parse");
-const {
-  verifyParsedContent,
-  saveVerificationResults,
-} = require("./verificationUtils");
 
 /**
  * A specialized parser for resumes similar to Serter_I.pdf format.
@@ -86,9 +82,15 @@ async function parseSerterFormat(resumeFilePath) {
       parsedData.languages = sections.languages.map((line) => line.trim());
     }
 
-    // Verify that all important content is captured
-    const verificationResults = verifyParsedContent(text, parsedData);
-    parsedData.verificationResults = verificationResults;
+    // Ensure all array fields are properly initialized
+    parsedData.experience = parsedData.experience || [];
+    parsedData.education = parsedData.education || [];
+    parsedData.skills = parsedData.skills || [];
+    parsedData.projects = parsedData.projects || [];
+    parsedData.certifications = parsedData.certifications || [];
+    parsedData.languages = parsedData.languages || [];
+
+    // Note: Verification is now handled separately instead of being included in the parsed data
   } catch (error) {
     console.error(`Error parsing file: ${error.message}`);
   }
@@ -679,16 +681,11 @@ function extractProjects(projectLines) {
   return projects;
 }
 
-/**
- * Helper function to process a single resume file
- * @param {string} resumeFilePath - Path to the resume file
- * @returns {Promise<Object>} - Parsed resume data
- */
-async function processResumeFile(resumeFilePath) {
-  return await parseSerterFormat(resumeFilePath);
-}
-
-// Export the parseSerterFormat function for use in other files
+// Export the parser with a descriptive name and metadata
 module.exports = {
-  parseSerterFormat,
+  name: "serter",
+  displayName: "Serter Format Parser",
+  description:
+    "Specialized parser for Serter resume format with structured sections",
+  parse: parseSerterFormat,
 };

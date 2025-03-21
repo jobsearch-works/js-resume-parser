@@ -1,11 +1,9 @@
-// resumeParser.js
 const fs = require("fs");
 const path = require("path");
 const pdfParse = require("pdf-parse");
-const { verifyParsedContent } = require("./verificationUtils");
 
 /**
- * A simple parser for resumes.
+ * A general-purpose parser for resumes in common formats.
  * This function will take a resume file path and extract relevant information.
  * @param {string} resumeFilePath - The path to the resume file to parse.
  * @returns {Object} - An object containing parsed information.
@@ -79,9 +77,7 @@ async function parseResume(resumeFilePath) {
       );
     }
 
-    // Verify that all important content is captured using the verification utility
-    const verificationResults = verifyParsedContent(text, parsedData);
-    parsedData.verificationResults = verificationResults;
+    // Note: Verification is now handled separately instead of being included in the parsed data
   } catch (error) {
     console.error(`Error parsing file: ${error.message}`);
   }
@@ -427,86 +423,10 @@ function extractSkills(skillsLines) {
   return skills;
 }
 
-/**
- * Processes all resume files in the resumes directory
- */
-async function processAllResumes() {
-  const resumesDir = path.join(__dirname, "resumes");
-
-  try {
-    // Make sure the parsed directory exists
-    const parsedDir = path.join(__dirname, "parsed", "default-parser");
-    if (!fs.existsSync(parsedDir)) {
-      fs.mkdirSync(parsedDir, { recursive: true });
-    }
-
-    // Get all files in the resumes directory
-    const files = fs.readdirSync(resumesDir);
-    const pdfFiles = files.filter(
-      (file) =>
-        path.extname(file).toLowerCase() === ".pdf" ||
-        file.toLowerCase().endsWith(".docx.pdf")
-    );
-
-    console.log(`Found ${pdfFiles.length} resume files to process`);
-
-    // Process each resume file
-    const results = [];
-    for (const file of pdfFiles) {
-      const filePath = path.join(resumesDir, file);
-      console.log(`Processing: ${file}`);
-
-      const result = await parseResume(filePath);
-
-      // Save the parsed data to a JSON file
-      const fileName = path.basename(file, path.extname(file));
-      const outputPath = path.join(parsedDir, `${fileName}.json`);
-      fs.writeFileSync(outputPath, JSON.stringify(result, null, 2));
-      console.log(`Parsed data saved to: ${outputPath}`);
-
-      results.push({
-        file,
-        result,
-      });
-    }
-
-    // Output summary
-    console.log("\nParsing Summary:");
-    results.forEach((item) => {
-      console.log(`\nFile: ${item.file}`);
-      console.log(`Name: ${item.result.name}`);
-      console.log(`Email: ${item.result.email}`);
-      console.log(`Phone: ${item.result.phone}`);
-      console.log(`LinkedIn: ${item.result.linkedin || "Not found"}`);
-      console.log(`Experience: ${item.result.experience.length} positions`);
-      console.log(`Education: ${item.result.education.length} entries`);
-      console.log(`Skills: ${item.result.skills.length} skills`);
-      if (item.result.verificationResults) {
-        console.log(
-          `Content coverage: ${item.result.verificationResults.coveragePercentage.toFixed(
-            2
-          )}%`
-        );
-        console.log(
-          `Missing content chunks: ${item.result.verificationResults.missingContent.length}`
-        );
-      }
-    });
-
-    console.log(
-      `\nAll results have been saved to the 'parsed/default-parser' directory`
-    );
-  } catch (error) {
-    console.error(`Error processing resumes: ${error.message}`);
-  }
-}
-
-// Run the processor
-processAllResumes().catch((error) => {
-  console.error("Error:", error);
-});
-
-// Export the parseResume function for use in other files
+// Export the parsing function with a descriptive name
 module.exports = {
-  parseResume,
+  name: "default",
+  displayName: "Default Parser",
+  description: "A general-purpose parser for common resume formats",
+  parse: parseResume,
 };

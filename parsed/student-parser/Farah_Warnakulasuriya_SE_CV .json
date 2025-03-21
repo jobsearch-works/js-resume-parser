@@ -1,0 +1,97 @@
+{
+  "name": "Farah Warnakulasuriya | Full Stack Software Engineer",
+  "title": "",
+  "email": "warnakulasuriyafarah@gmail.com",
+  "phone": "+61431283515",
+  "linkedin": "",
+  "github": "",
+  "location": "Profile",
+  "summary": "Full Stack Software Engineer with international experience in designing, building, and optimizing scalable, high- performance web applications. Adept at backend development, API architecture, database optimization and frontend performance tuning. Strong experience in EdTech, AI and blockchain with a focus on delivering efficient, secure and maintainable software solutions. Key Skills • Frontend: JavaScript, TypeScript, React.js, Next.js, Redux, Material-UI • Backend: Node.js, Nest.js, Express.js, Scalable API design (RESTful, GraphQL), Python, Flask • Databases: MySQL, MongoDB, SQLite, Prisma ORM • Security & Authentication: JWT, OAuth, role-based access control (RBAC), OWASP best practices • DevOps & Cloud: AWS (EC2, S3, RDS), Firebase, CI/CD Pipelines • Software Development Practices: Agile (Scrum, Kanban), Git/GitHub, Unit Testing, Automated Testing",
+  "experience": [
+    {
+      "title": "Associate Software Engineer - Third Space Learning, UK                                             July 2023 - January 2024",
+      "company": "",
+      "location": "",
+      "period": "",
+      "responsibilities": [
+        "Third Space Learning is a UK based  EdTech company providing online tutoring to over 1,000 schools, impacting",
+        "700,000+ students.",
+        "- Translated Figma designs into scalable, reusable React components, improving frontend development",
+        "speed and maintaining UI consistency across projects.",
+        "- Developed and optimized a high-performance CSV export feature, reducing data processing time by 70%",
+        "and improving LMS reporting efficiency.",
+        "- Architected and refactored backend services using Prisma ORM and MySQL, leading to a 50% improvement",
+        "in query performance under heavy load.",
+        "- Designed and deployed a secure authentication system using JWT & RBAC, ensuring scalable access",
+        "control for 10,000+ users.",
+        "- Enhanced Next.js-based Session Issues Management System (SIMS), improving SEO rankings by 30% and",
+        "optimizing system performance.",
+        "- Led peer code reviews and mentored junior developers, improving overall team productivity and adherence",
+        "to coding standards.",
+        "- Designed and developed 30+ RESTful APIs in Node.js/Nest.js, reducing data processing latency by 45% and",
+        "improving system efficiency.",
+        "- Implemented JWT authentication and input validation, reducing unauthorized access attempts by 80%.",
+        "- Developed automation scripts in TypeScript, reducing manual data processing workload by 60%.",
+        "- Optimized API architecture, reducing redundant function calls and improving server response times by 35%.",
+        "- Refactored database queries in MySQL, improving query performance for high-concurrency workloads.",
+        "Third Space Global is the Sri Lankan operations hub for Third Space Learning, employing over 250 team members",
+        "to deliver high-quality tutoring and support services.",
+        "- Implemented automated testing scripts, reducing manual QA workload by 30% and improving software",
+        "reliability.",
+        "- Redesigned reporting structures, reducing assessment time and improving clarity in evaluation metrics.",
+        "- Trained and managed 250+ educators, ensuring proper use of digital learning tools and platforms.",
+        "- Played a pivotal role in the recruitment process, conducting over 50 interviews and screenings to build a",
+        "team capable of supporting the organization's growth and high educational standards, contributing to a",
+        "40% increase in team size."
+      ]
+    },
+    {
+      "title": "Community Contributions",
+      "company": "",
+      "location": "VR Goggle Use in Therapy, Patches Australia                                                  March",
+      "period": "March 2025 – Present",
+      "responsibilities": [
+        "- Conducting research on the effectiveness of Virtual Reality (VR) goggles in therapy and education.",
+        "- Developing deployment strategies for VR therapy devices (Meta Quest 2 & 3), ensuring proper system",
+        "integration.",
+        "- Conducting research on user engagement in VR-based education and therapy, exploring how immersive",
+        "technology can improve learning outcomes."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Computer Science (IT) specializing in Software Systems                                                        July 2024 - Present",
+      "institution": "The University of Western Australia, Perth, WA",
+      "location": "",
+      "period": "February 2023 - February 2024",
+      "details": []
+    },
+    {
+      "degree": "Bachelor of Science - Software Engineering (First Class Honors)                                    February 2023 - February 2024",
+      "institution": "",
+      "location": "",
+      "period": "",
+      "details": []
+    }
+  ],
+  "skills": [],
+  "projects": [
+    {
+      "name": "Gaming platform leveraging AI and deep learning modules to support children with autism in learning.",
+      "timeframe": "",
+      "description": [
+        "• RDXnodeGuard - Github Repository | Technologies: JavaScript, React.js, Node.js, Firebase"
+      ]
+    },
+    {
+      "name": "Engineered a web platform functioning as a node validator for Radix cryptocurrency.",
+      "timeframe": "",
+      "description": [
+        "• Live Weather Forecaster App - Github Repository | Technologies: JavaScript, React.js, TailwindCSS"
+      ]
+    }
+  ],
+  "honors": [],
+  "references": []
+}
