@@ -1,0 +1,269 @@
+{
+  "name": "Serter I.",
+  "title": "Details",
+  "email": "serteriyigunlu@hotmail.com",
+  "phone": "",
+  "linkedin": "",
+  "location": "",
+  "summary": "Pro,cient in various platforms  languages  and embedded systems. Experienced with the latest cutting edge development tools and procedures. - Able to effectively selfKmanage during independent projects  as well as collaborate as part of a productive team. •nowledgeable in user interface  testing  and debugging processes. Bringing forth expertise in design  installation  testing and maintenance of web systems.-",
+  "experience": [
+    {
+      "title": "Softaware Developer (Junior), Self-Employed, Brisbane",
+      "company": "",
+      "location": "",
+      "period": "",
+      "responsibilities": [
+        "Q ' YQ B E R   + 0 + +   z   P R E S E N Y",
+        "TBuilt website interfaces with HYML  'SS and Javascript.",
+        "TApplied knowledge of JavaScript and QbjectKQriented Programming to create",
+        "successful designs.",
+        "TDesigned  implemented and monitored web pages  plugins and functionality for",
+        "continuous improvement.",
+        "TMultiKtasked across multiple functions and roles to meet deadlines and",
+        "organiVational expectations.",
+        "TPlanned website development  converting mockups into usable web presence",
+        "with HYML  JavaScript  AJAX  and JSQN coding.",
+        "TDeveloped wireframes  site maps and content inventories for new website",
+        "designs"
+      ]
+    },
+    {
+      "title": "Manager, Airport Kebabs, Brisbane",
+      "company": "",
+      "location": "",
+      "period": "",
+      "responsibilities": [
+        "N Qq E M B E R   + 0 2 4   z   N Qq E M B E R   + 0 2 6",
+        "TMaximised performance by monitoring daily activities and mentoring team",
+        "members.",
+        "TQnboarded new employees with training and new hire documentation.",
+        "TDeveloped and maintained relationships with customers and suppliers through",
+        "account development.",
+        "T'ontrolled labour hours and inventory costs through handsKon management",
+        "and proactive changes."
+      ]
+    },
+    {
+      "title": "Mechanical Engineer, Alkon Energy, Izmir",
+      "company": "",
+      "location": "",
+      "period": "",
+      "responsibilities": [
+        "F E B RUA R O   + 0 2 +   z   N Qq E M B E R   + 0 2 +",
+        "TWrote and revised maintenance procedures.",
+        "T'onducted research to test and analyse feasibility  design  operation and",
+        "performance of eIuipment  components  and systems.",
+        "TReviewed technical drawings developed by 'AD technicians and drafters."
+      ]
+    },
+    {
+      "title": "Mechanical Engineer, Turkish Airlines, Istanbul",
+      "company": "",
+      "location": "",
+      "period": "",
+      "responsibilities": [
+        "D E ' E M B E R   + 0 2 0   z   JA N UA R O   + 0 2 +",
+        "TProduced and maintained well documented programs.",
+        "T'ourse organisation for aircraft technicians.",
+        "TPreparation Jying technicians schedule.",
+        "TPrepare aircraft technicians licence  adding aircraft types certi,cates  preparing",
+        "application forms.",
+        "TGenerated system concepts to satisfy product reIuirements."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Engineering",
+      "institution": "(Research Degree) Queensland University of",
+      "location": "",
+      "period": "",
+      "details": [
+        "Technology, Brisbane",
+        "+ 0 2 3   z   + 0 2 5"
+      ]
+    },
+    {
+      "degree": "Management, Martin College, Brisbane",
+      "institution": "",
+      "location": "",
+      "period": "",
+      "details": [
+        "+ 0 0 7   z   + 0 0 7"
+      ]
+    },
+    {
+      "degree": "Maintenance Engineering, Aviation Australia, Brisbane",
+      "institution": "",
+      "location": "",
+      "period": "",
+      "details": [
+        "+ 0 0 6   z   + 0 0 7"
+      ]
+    },
+    {
+      "degree": "Bachelor of Engineer, Celal Bayar University, Manisa",
+      "institution": "",
+      "location": "",
+      "period": "",
+      "details": [
+        "2 9 9 7   z   + 0 0 +"
+      ]
+    }
+  ],
+  "skills": [],
+  "projects": [
+    {
+      "name": "MERN  Recipe App, Brisbane",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "TYhis projects is a recipe app .",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "TOou can log in the site to see and add recipes.",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "TOou can delete add  change your recipes after logKin.",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "TOou can write comments on others recipes after log Kin.",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "TBuilt in MERN.",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Tavel Log Full Stack Application",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "TQur Yravelog app is a dynamic platform designed to bring travelers and explorers",
+      "timeframe": "",
+      "link": "",
+      "description": [
+        "together by allowing them to share their travel experiences."
+      ]
+    },
+    {
+      "name": "TIts core purpose is to create a community of passionate travelers and to build a",
+      "timeframe": "",
+      "link": "",
+      "description": [
+        "comprehensive database of travel experiences."
+      ]
+    },
+    {
+      "name": "TMERN stack MongoDB  a NoSCL database Express.js streamlines serverKside",
+      "timeframe": "",
+      "link": "",
+      "description": [
+        "coding  and Node.js provides a robust environment for serverKside JavaScript",
+        "execution  which should mean our app is both fast and scalable. Furthermore"
+      ]
+    },
+    {
+      "name": "React.js  known for its componentKbased architecture and ef,cient rendering",
+      "timeframe": "",
+      "link": "",
+      "description": [
+        "which will allow us to create a userKfriendly  ef,cient interface that helps users",
+        "enjoy a positive user experience."
+      ]
+    },
+    {
+      "name": "Guess Number Game",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "TYhis project is a game about guessing 4 digits number.",
+      "timeframe": "",
+      "link": "",
+      "description": [
+        "T'omputer generates 4 digits number (First digit can not be 0 and all digits are",
+        "different)  and the user try1s to guess the number."
+      ]
+    },
+    {
+      "name": "TEg. computer chose 2+34 and you guessed 2456  output would be —2  K2 because",
+      "timeframe": "",
+      "link": "",
+      "description": [
+        "you did guess correct two digits but one of them is in the correct position and the",
+        "other is not."
+      ]
+    },
+    {
+      "name": "TBuilt with Python.",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Inventory Tracker",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "TYhis project was about creating an inventory list.",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "TBuilt with JavaScript and React.",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Rental Management",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "TYhis project was about rental managament. It relies on data management only.",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "TUsers can provide feedback or enter complaints about any rental place that they",
+      "timeframe": "",
+      "link": "",
+      "description": [
+        "have lived."
+      ]
+    },
+    {
+      "name": "TBuilt with PostgeSCL and Flask.",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    }
+  ],
+  "certifications": [],
+  "languages": []
+}

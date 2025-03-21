@@ -1,0 +1,251 @@
+{
+  "name": "Karan Sandhu",
+  "title": "Student At QUT",
+  "email": "sandhukaran2821@gmail.com",
+  "phone": "",
+  "linkedin": "linkedin.com/in/karan-sandhu28",
+  "location": "UI/UX optimization, performance-driven solutions, and scalable",
+  "summary": "",
+  "experience": [
+    {
+      "title": "Associate I - Technology",
+      "company": "",
+      "location": "",
+      "period": "",
+      "responsibilities": [
+        "RMgx Technologies LLP",
+        "02/2023 - 02/2024,  Gurugram, India",
+        "Developed and optimized frontend features for various web",
+        "applications.",
+        "Collaborated with UX and BA teams to refine requirements",
+        "and UI designs.",
+        "Resolved customer issues and provided efficient technical",
+        "solutions."
+      ]
+    },
+    {
+      "title": "Web Developer Intern",
+      "company": "",
+      "location": "",
+      "period": "",
+      "responsibilities": [
+        "RMgx Technologies LLP",
+        "05/2022 - 01/2023,  Gurugram, India",
+        "Designed, developed, and maintained websites for both in-",
+        "house and client projects.",
+        "Optimized website performance and improved load times",
+        "through efficient coding practices.",
+        "Assisted in debugging and troubleshooting web applications",
+        "to enhance user experience.",
+        "SDE Intern"
+      ]
+    },
+    {
+      "title": "Guenstiger India Pvt Ltd",
+      "company": "",
+      "location": "Developed responsive web interfaces using HTML, CSS, and",
+      "period": "",
+      "responsibilities": [
+        "03/2022 - 05/2022,  Gurugram, India",
+        "JavaScript.",
+        "Enhanced user experience through performance",
+        "optimization and collaboration with cross-functional teams."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Information Technology",
+      "institution": "",
+      "location": "",
+      "period": "",
+      "details": []
+    },
+    {
+      "degree": "",
+      "institution": "Queensland University of Technology",
+      "location": "",
+      "period": "",
+      "details": [
+        "02/2024 - 12/2025,  Brisbane, QLD, Australia"
+      ]
+    },
+    {
+      "degree": "Bachelor of Computer Science",
+      "institution": "",
+      "location": "",
+      "period": "",
+      "details": [
+        "Engineering"
+      ]
+    },
+    {
+      "degree": "",
+      "institution": "Chitkara Institute of Engineering and",
+      "location": "",
+      "period": "",
+      "details": [
+        "Technology, Punjab, India",
+        "07/2019 - 05/2023,  6.9 GPA"
+      ]
+    }
+  ],
+  "skills": [
+    "ReactJS Angular Typescript React Native",
+    "Material UI Bootstrap HTML CSS JS",
+    "NodeJS MongoDB ExpressJS Java C#",
+    "Flutter Git SQL Firebase Postman"
+  ],
+  "projects": [
+    {
+      "name": "Ecommerce Shipping Solution",
+      "timeframe": "03/2023 - 02/2024",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Developed a Canadian Angular web application for international",
+      "timeframe": "",
+      "link": "",
+      "description": [
+        "shipping."
+      ]
+    },
+    {
+      "name": "Handled live customer queries and resolved issues.",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Realtime Flood Alert & Management System",
+      "timeframe": "",
+      "link": "",
+      "description": [
+        "(02/2022 - 03/2023)"
+      ]
+    },
+    {
+      "name": "Developed the frontend for web and mobile application using",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "React and React Native .",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Realtime video, audio & content management system",
+      "timeframe": "",
+      "link": "",
+      "description": [
+        "(05/2022 - 09/2022)"
+      ]
+    },
+    {
+      "name": "Developed the frontend for a React web app used in the Middle",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "East.",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Ecommerce Web Application",
+      "timeframe": "03/2022 - 05/2022",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Worked as a front-end developer in this Europe based react",
+      "timeframe": "",
+      "link": "",
+      "description": [
+        "webapp."
+      ]
+    },
+    {
+      "name": "Grabhub- food Order Web App",
+      "timeframe": "12/2022 - 02/2022",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Designed and developed a full-stack food ordering application",
+      "timeframe": "",
+      "link": "",
+      "description": [
+        "using NodeJS and MongoDB."
+      ]
+    },
+    {
+      "name": "HONOURS AND AWARDS",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Core value award for \"Learning\"",
+      "timeframe": "09/2022",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Recognized at RMgX for continuous learning and growth.",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Rising Star Award of 2022",
+      "timeframe": "12/2022",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Awarded for exceptional ownership and performance at RMgX.",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "REFERENCES",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Available on request",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Achievements/Tasks",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Achievements/Tasks",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    },
+    {
+      "name": "Achievements/Tasks",
+      "timeframe": "",
+      "link": "",
+      "description": []
+    }
+  ],
+  "certifications": [],
+  "languages": []
+}

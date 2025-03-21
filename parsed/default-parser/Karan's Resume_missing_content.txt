@@ -1,0 +1,80 @@
+Karan Sandhu 
+Student At QUT 
+Innovative software developer with expertise in full-stack
+development, specializing in modern frontend technologies. Skilled in
+UI/UX optimization, performance-driven solutions, and scalable
+application design. 
+sandhukaran2821@gmail.com 
++61 450 906 076 
+Brisbane, Australia 
+linkedin.com/in/karan-sandhu28 
+github.com/sandhukaran28 
+WORK EXPERIENCE 
+Associate I - Technology 
+RMgx Technologies LLP 
+02/2023 - 02/2024,  Gurugram, India 
+Developed and optimized frontend features for various web
+applications. 
+Collaborated with UX and BA teams to refine requirements
+and UI designs. 
+Resolved customer issues and provided efficient technical
+solutions. 
+Web Developer Intern 
+RMgx Technologies LLP 
+05/2022 - 01/2023,  Gurugram, India 
+Designed, developed, and maintained websites for both in-
+house and client projects. 
+Optimized website performance and improved load times
+through efficient coding practices. 
+Assisted in debugging and troubleshooting web applications
+to enhance user experience. 
+SDE Intern 
+Guenstiger India Pvt Ltd 
+03/2022 - 05/2022,  Gurugram, India 
+Developed responsive web interfaces using HTML, CSS, and
+JavaScript. 
+Enhanced user experience through performance
+optimization and collaboration with cross-functional teams. 
+EDUCATION 
+Master of Information Technology 
+Queensland University of Technology 
+02/2024 - 12/2025,  Brisbane, QLD, Australia 
+Bachelor of Computer Science &
+Engineering 
+Chitkara Institute of Engineering and
+Technology, Punjab, India 
+07/2019 - 05/2023,  6.9 GPA 
+SKILLS 
+ReactJS Angular Typescript React Native 
+Material UI Bootstrap HTML CSS JS 
+NodeJS MongoDB ExpressJS Java C# 
+Flutter Git SQL Firebase Postman 
+PROJECTS 
+Ecommerce Shipping Solution (03/2023 - 02/2024) 
+Developed a Canadian Angular web application for international
+shipping. 
+Handled live customer queries and resolved issues. 
+Realtime Flood Alert & Management System
+ (02/2022 - 03/2023) 
+Developed the frontend for web and mobile application using
+React and React Native . 
+Realtime video, audio & content management system
+ (05/2022 - 09/2022) 
+Developed the frontend for a React web app used in the Middle
+East. 
+Ecommerce Web Application (03/2022 - 05/2022) 
+Worked as a front-end developer in this Europe based react
+webapp. 
+Grabhub- food Order Web App (12/2022 - 02/2022) 
+Designed and developed a full-stack food ordering application
+using NodeJS and MongoDB. 
+HONOURS AND AWARDS 
+Core value award for "Learning" (09/2022) 
+Recognized at RMgX for continuous learning and growth. 
+Rising Star Award of 2022 (12/2022) 
+Awarded for exceptional ownership and performance at RMgX. 
+REFERENCES 
+Available on request 
+Achievements/Tasks 
+Achievements/Tasks 
+Achievements/Tasks

@@ -1,0 +1,38 @@
+{
+  "fileName": "Karan's Resume",
+  "parsers": {
+    "default": {
+      "name": true,
+      "email": true,
+      "phone": false,
+      "linkedin": true,
+      "location": false,
+      "experienceCount": 0,
+      "educationCount": 4,
+      "skillsCount": 34,
+      "projectsCount": 0,
+      "languagesCount": 0,
+      "certificationsCount": 0,
+      "coveragePercentage": 0,
+      "missingContentCount": 1
+    },
+    "serter": {
+      "name": true,
+      "email": true,
+      "phone": false,
+      "linkedin": true,
+      "location": true,
+      "experienceCount": 3,
+      "educationCount": 4,
+      "skillsCount": 4,
+      "projectsCount": 23,
+      "languagesCount": 0,
+      "certificationsCount": 0,
+      "coveragePercentage": 0,
+      "missingContentCount": 0
+    }
+  },
+  "fileSize": 52,
+  "timestamp": "2025-03-21T19:41:22.639Z",
+  "bestParser": "serter"
+}

@@ -1,0 +1,436 @@
+{
+  "name": "Alexandra Makagon",
+  "email": "alexandramkgn@gmail.com",
+  "phone": "+61434198310",
+  "address": "",
+  "linkedin": "",
+  "summary": "",
+  "experience": [
+    {
+      "company": "Enterprise Data Architect, Macquarie Group, banking and financial services. Sydney, Australia ( -",
+      "position": "",
+      "period": "June 2023",
+      "description": [
+        "Present). https://www.macquarie.com.au",
+        "● Lead data modeling practice across the whole Macquarie enterprise (CGM, RMG, BFS, MacCap,",
+        "FMG, MAM, LGG, COG)",
+        "● Created and secured endorsement of the new enterprise Data Modelling Framework, engaging all",
+        "group data architects and senior data modelers",
+        "● Established and lead Data Modelling Working Group, promoting consistent data modeling standards",
+        "and processes with more than 120 participants across all groups",
+        "● Support group data architects and group data officers in delivering business critical master data",
+        "models",
+        "● Completed POC across various stakeholder groups for the strategic data modeling tool – Erwin,",
+        "securing endorsement by all groups and enterprise Engineering Leadership Team",
+        "● Synthesized requirements and designed enterprise target data modeling solution (Erwin,",
+        "Starburst/Hive bridge, Jira, BitBucket, Collibra, Microsoft Active Directory, source systems)",
+        "● Supervised Erwin data modeling solution implementation, providing architectural governance to 8+",
+        "internal infrastructure engineering teams and 3+ Erwin vendor teams",
+        "● Lead engagement with Erwin Vendor Product team to design and deliver Jira and Erwin API"
+      ]
+    },
+    {
+      "company": "integration for  release",
+      "position": "",
+      "period": "market",
+      "description": [
+        "● Design architecture and integration patterns for medallion architecture AWS data platforms: AWS S3,",
+        "Hive Metastore, Airflow, Starburst Presto, Redshift",
+        "● Design architecture and integration patterns for GCP data platforms: Cloud Storage, BigQuery, DBT,",
+        "Cloud SQL",
+        "● Support reimplementation of Collibra data governance platform, producing relevant architecture and",
+        "integration patterns",
+        "● Contribute to enterprise data architecture strategy and data architecture standards",
+        "Accomplishments:",
+        "- Implemented Erwin target data modeling solution on scope and with in target deadlines ( Erwin Data"
+      ]
+    },
+    {
+      "company": "Modeler, Erwin , Erwin ER360, Microsoft Active Directory SSO, Jira, BitBucket, Starburst/Hive,",
+      "position": "",
+      "period": "Mart",
+      "description": [
+        "Redshift, JSON, BigQuery, Azure VM for MacOS)",
+        "- Delivered enterprise Data Modelling Framework, actively operationalised across all Macquarie groups",
+        "- Promoted Data Modeling standard in Enterprise Data Architecture list of standards, that mandates",
+        "data modelling across all Macquarie groups",
+        "- Increased the number of the groups adopting enterprise data modeling tool from 1 to 7, out of all 8",
+        "groups (COG, CGM, RMG, BFS, LGG, FMG, MacCap)",
+        "- Groups delivered more than 70% of business-critical master data models",
+        "- Phased out tactical data modelling tool Enterprise Architect Sparx"
+      ]
+    },
+    {
+      "company": "Data Services Officer, Charter Hall, vertically integrated investment fund. Sydney, Australia ( –",
+      "position": "",
+      "period": "April 2021",
+      "description": []
+    },
+    {
+      "company": "). https://www.charterhall.com.au",
+      "position": "",
+      "period": "June 2023",
+      "description": [
+        "● Led data and business intelligence function",
+        "● Managed end to end group data infrastructure (Azure)",
+        "● Led a team of Microsoft BI stack developers",
+        "● Devised and maintain current and target data architecture diagrams",
+        "● Working closely with solution architects, advised on solution architecture design from data integrity,",
+        "quality, and accessibility perspective",
+        "● Formulated data infrastructure development standards and physical data modelling principles for",
+        "dimensional enterprise data warehouse and Azure Analysis Service tabular data model, leveraging",
+        "Kimball methodology",
+        "● Designed enterprise data model extensions for strategic business initiative and produce POC`s to",
+        "support Bi developers implementing model changes",
+        "● Developed conceptual and logical data models reflecting data domains across internal, 3",
+        "rd",
+        "party, and",
+        "public data",
+        "● Devised design and delivered data integrations from variety of sources utilizing SSIS, Azure Logic",
+        "Apps, API`s, Databricks, Data Factory, Power Automate, SFTP file drops, Database replications,",
+        "Simego, Synapse Analytics, extracting and loading structured and unstructured data into the Azure",
+        "data lake",
+        "● Managed self-service BI program with 10+ citizen PowerBi developers",
+        "● Worked closely with senior business stakeholders to scope and drive business outcomes by means of",
+        "data and BI solutions; liaised with stakeholders from various business and IT departments to secure",
+        "funding and cross functional resources when required",
+        "● Led design and implementation of enterprise Data Access Management solution centralising",
+        "role-based access management, formalising data classification, introducing data lineage (AAS, Active",
+        "Directory, Databricks, Purview)",
+        "● Led Master Data Management initiative in the capacity of Data Architect alongside Chief Technology",
+        "and Information Officer (Profisee, Databricks, Data Factory)",
+        "Accomplishments:",
+        "- Formulated a variety of data quality frameworks, production change controls, standardized templates,",
+        "data modeling and solution design principles, that are widely adopted in the business and assure",
+        "consistent quality of BI solutions delivered both by IT and citizen developers",
+        "- Shifted business towards utilizing single enterprise data model and consolidated all legacy data",
+        "models into one",
+        "- Increased enterprise grade BI solutions usage across the business by more than 50%",
+        "- Designed and supervised implementation of Master Data Management solutions for core business",
+        "dimensions and definitions"
+      ]
+    },
+    {
+      "company": "Business Intelligence Developer, Charter Hall (Australia ().",
+      "position": "",
+      "period": "December 2019 – April 2021",
+      "description": [
+        "● Designed BI solutions and underlying physical architecture across all Microsoft BI layers: SSIS source",
+        "system data loading, dimensional data warehouse design, AAS tabular data modeling, PowerBi",
+        "Service reporting, in order to create efficiencies in the business and instantly serve business with",
+        "relevant insights",
+        "● Engaged with senior executives and business stakeholders to assess and evaluate their reporting",
+        "needs and existing business processes to drive performance metrics, free up working hours, and",
+        "secure business continuity",
+        "● Designed and developed business intelligence solutions building blocks that could have been easily",
+        "reused and transferred from one solution to another promptly serving rapidly growing Charter Hall",
+        "business and its reporting and automation requirements",
+        "● Designed and developed data integrations flowing data between source systems creating process",
+        "efficiencies and supporting data integrity across the business",
+        "● Leveraged BI Infrastructure, Simego integration services and Azure applications to integrate data",
+        "between business systems and third party solutions to reduce integration costs and create processes",
+        "efficiencies (Yardi ERP, CRM Dynamics, MRI, OneVue etc)",
+        "● Assessed source system current design, scope new feature requirements and engaged with third",
+        "party partners supervising development and implementation",
+        "● Developed ad hoc enhancements for the existing BI solutions",
+        "● Provided BI stack training to all IT streams team members to increase the awareness about Charter",
+        "Hall BI capabilities and enable IT team members to develop their own BI solutions for IT operational",
+        "purposes",
+        "● Together with business stakeholders assessed quality of their data and provided data quality and data",
+        "integrity recommendations",
+        "● Coordinated offshore BI developer to scope and provide requirements relevant to support tickets and",
+        "enhancements they worked on, reviewed their work on the completion",
+        "● Supported Data Governance program implementation across BI infrastructure"
+      ]
+    },
+    {
+      "company": "PowerBi Developer, Charter Hall ().",
+      "position": "",
+      "period": "October 2018 – December 2019",
+      "description": [
+        "● Rolled out numerous enterprise grade PowerBi service reports for Fund management, Property",
+        "operations, Investor Relationships, Leasing activities, consumed by business analysts, mid-level and",
+        "senior management including Charter Hall CEO",
+        "● Worked closely with senior stakeholders to gather requirements and created entity relationship",
+        "diagrams using Erwin",
+        "● Contributed to the enterprise data warehouse design using Kimball/Dimensional modeling",
+        "methodology",
+        "● Designed, developed and optimised AAS tabular data models with live connection to the Enterprise",
+        "Data Warehouse",
+        "● Designed and developed PowerBi desktop data models connected to Excel, Sharepoint, and Direct",
+        "Query data sources",
+        "● Wrote ETL SSIS data load packages in SQL and C# loading data into the data warehouse from",
+        "source system databases and Excel",
+        "● Developed Azure SFTP file drops to consume data from external data sources",
+        "● Wrote DAX measures with particularly complex syntax supporting periodic financial reporting",
+        "● Analysed and optimised performance of existing DAX measures in DAX Studio",
+        "● Developed standardised design and development guidelines and report templates for PowerBi",
+        "solutions",
+        "● Hired, coached and coordinated work of two other PowerBi developers (onshore and offshore)",
+        "● Ran Data Literacy initiative across the business uplifting business users` BI capabilities"
+      ]
+    },
+    {
+      "company": "Business Development Analyst, HASSELL, architecture practice. Sydney, Australia ().",
+      "position": "",
+      "period": "May 2016 – Present",
+      "description": [
+        "https://www.hassellstudio.com",
+        "● Performed PowerBi data modelling aggregating and reconciling data from multiple databases (CRM",
+        "Dynamics and AXs)",
+        "● Designed and administrated standardised PowerBi reports and dashboards providing holistic",
+        "performance and forecasting information against every business unit and various time periods",
+        "servicing a pool of more than 100 end users including Executive board members, CEO, Regional and"
+      ]
+    },
+    {
+      "company": "Sector senior management",
+      "position": "",
+      "period": "Market",
+      "description": [
+        "● Defined ETL process and structure underlying PowerBi core data model for secure and efficient data",
+        "sourcing",
+        "● Supervised performance and development of SSAS OLAP cubes as a composite of PowerBi ETL and",
+        "a standalone reporting tool",
+        "● Maintained PowerBi testing and development environments",
+        "● Developed source systems validation rules and supervised scheduled data cleansing procedures",
+        "● Supervised development of the CRM Dynamics system servicing more than 200 users",
+        "● Liaised with project sponsors and stakeholders to scope functional requirements for CRM features",
+        "and workflows",
+        "● Developed and sign off solution demos with project sponsors",
+        "● Formulated technical brief and developed detailed solution development critical path/s for the IT team",
+        "● Supervised testing and deployment",
+        "● Wrote SQL statements to capture data and populate new custom CRM Dynamics fields and database",
+        "columns",
+        "● Wrote XML code for custom CRM Dynamics visualisations",
+        "● Provided ad hoc data and business analysis service to various business departments: Business"
+      ]
+    },
+    {
+      "company": "development, Executive board, HR, Finance,",
+      "position": "",
+      "period": "Marketing",
+      "description": [
+        "● Wrote SQL queries to interrogate SQL server databases directly for ad hoc in-depth data analysis",
+        "Accomplishments:",
+        "- Embedded profitability analysis in bid review automation",
+        "- Reduced volume of low fee - low profit projects by 5%",
+        "- Introduced CRM validation that increased AX and CRM cross system common key success rate from",
+        "67% to 100%",
+        "- Developed client ranking algorithm to increase volume of high profit projects"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "). http://www.onlinecoursesaustralia.edu.au/",
+      "degree": "",
+      "period": "2016",
+      "details": []
+    },
+    {
+      "institution": "● Administrated cross system data",
+      "degree": "management and supervised IT data integrity projects",
+      "period": "",
+      "details": [
+        "● Scoped Salesforce and partner API integrations"
+      ]
+    },
+    {
+      "institution": "● Issued monthly",
+      "degree": "marketing and sales performance reports with tactical and strategic recommendations",
+      "period": "",
+      "details": []
+    },
+    {
+      "institution": "to CEO senior",
+      "degree": "management, and Board of investors",
+      "period": "",
+      "details": []
+    },
+    {
+      "institution": "● Administrated sales and",
+      "degree": "marketing reports and dashboards across Salesforce, Pardot and Google",
+      "period": "",
+      "details": [
+        "Analytics"
+      ]
+    },
+    {
+      "institution": "● Designed",
+      "degree": "marketing automations and drip EDM campaign logic in Pardot",
+      "period": "",
+      "details": []
+    },
+    {
+      "institution": "● Provided customer",
+      "degree": "base segmentation and cluster analysis in SPSS",
+      "period": "",
+      "details": []
+    },
+    {
+      "institution": "● Interrogated SQL student data",
+      "degree": "base to design post acquisition campaigns, up sell and cross sell sales",
+      "period": "",
+      "details": [
+        "campaigns, increase length of student lifecycle and course completion rates",
+        "● Provided analytical insights for ad hoc business initiatives such as product bundling, customer",
+        "geo-localization, customer satisfaction"
+      ]
+    },
+    {
+      "institution": "● Formulated forecasting logic for sales and",
+      "degree": "marketing teams",
+      "period": "",
+      "details": []
+    },
+    {
+      "institution": "● Analyzed",
+      "degree": "marketing channel performance and advised on marketing channels portfolio management",
+      "period": "",
+      "details": [
+        "Accomplishments:",
+        "- Wrote script and implemented multifactor lead rating algorithm in Salesforce"
+      ]
+    },
+    {
+      "institution": "- Wrote solution logic and supervised implementation of",
+      "degree": "marketing channel tracking consolidation",
+      "period": "",
+      "details": [
+        "- Delivered Delacon call tracking implementation"
+      ]
+    },
+    {
+      "institution": "- Delivered Pardot",
+      "degree": "marketing automation implementation",
+      "period": "",
+      "details": []
+    },
+    {
+      "institution": "- Introduced monthly perfor",
+      "degree": "mance reports",
+      "period": "",
+      "details": []
+    },
+    {
+      "institution": "Various Roles in Analytics IT Development and Project Management Various companies (June  –",
+      "degree": "Management, Various companies (June 2007 –",
+      "period": "2007",
+      "details": []
+    },
+    {
+      "institution": "May )",
+      "degree": "May 2015)",
+      "period": "2015",
+      "details": [
+        "The Open Group"
+      ]
+    },
+    {
+      "institution": "TOGAF Enterprise Architecture Practitioner (TOGAF 10)  (September )",
+      "degree": "",
+      "period": "2024",
+      "details": [
+        "AWS"
+      ]
+    },
+    {
+      "institution": "Architecting Solutions on AWS (June )",
+      "degree": "",
+      "period": "2024",
+      "details": [
+        "Databricks"
+      ]
+    },
+    {
+      "institution": "Data Engineering with Databricks (September )",
+      "degree": "",
+      "period": "2022",
+      "details": [
+        "Melbourne Business School"
+      ]
+    },
+    {
+      "institution": "MBA concentration in Strategy. Melbourne Australia ().",
+      "degree": "MBA, concentration in Strategy. Melbourne, Australia (September 2011 - December 2011).",
+      "period": "September 2011 - December 2011",
+      "details": [
+        "Tel Aviv University"
+      ]
+    },
+    {
+      "institution": "MBA. Sofaer MBA Scholarship. Tel Aviv Israel ().",
+      "degree": "MBA. Sofaer MBA Scholarship. Tel Aviv, Israel (September 2010 - August 2011).",
+      "period": "September 2010 - August 2011",
+      "details": []
+    },
+    {
+      "institution": "Russian State University for the Hu",
+      "degree": "manities",
+      "period": "",
+      "details": []
+    },
+    {
+      "institution": "",
+      "degree": "Bachelor and Masters of Science in Psychology. Russian State University for the Humanities Scholarship.",
+      "period": "",
+      "details": []
+    },
+    {
+      "institution": "Moscow Russia ().",
+      "degree": "",
+      "period": "September 2004 -December 2009",
+      "details": []
+    }
+  ],
+  "skills": [
+    "Data governance: Collibra",
+    "Alation",
+    "Informatica",
+    "Profisee",
+    "Purview",
+    "Databricks Unity Catalog",
+    "Storage: Microsoft SQL Server",
+    "Teradata",
+    "Redshift",
+    "GCP/BigQuery",
+    "Azure DataLake",
+    "AWS/Hive/S3",
+    "Data integration: Azure Data Factory",
+    "Databricks",
+    "API`s",
+    "Azure Logic Apps",
+    "Simego",
+    "Microsoft Synapse",
+    "Analytics",
+    "Microsoft Power Automate",
+    "SSIS",
+    "Data Modeling: Enterprise Architect Sparx",
+    "Erwin",
+    "Data visualization and reporting: PowerBi",
+    "SSRS",
+    "Tableau",
+    "Visio",
+    "5dChart",
+    "Excel",
+    "Draw.io"
+  ],
+  "languages": [
+    "Methodologies: PMBOK (project management body of knowledge), DMBOK (data management body of",
+    "knowledge), Agile, Scrum, Kimball, Data Vault, TOGAF Enterprise Architecture",
+    "ERP: Yardi, MRI, AX",
+    "CRM: Salesforce, 365 CRM Dynamics, Shopify, custom CRM`s",
+    "Marketing automations and EDM systems: Mailchimp, Pardot",
+    "Online marketing analysis: Google Analytics (attribution modelling), Optimizely (A/B and multivariate testing),",
+    "Pardot (lead nurturing and closed loop marketing analytics), Qlikview",
+    "Online advertising platforms: Adwords, Critero, Adroll, Facebook, Bing Ads",
+    "Content management and analysis: Umbraco, Magento, PhraseApp, Inspectlet (heatmaps), custom CMS`s",
+    "REFERENCES: On request."
+  ],
+  "certifications": [],
+  "verificationResults": {
+    "missingContent": [],
+    "coveragePercentage": 100
+  }
+}

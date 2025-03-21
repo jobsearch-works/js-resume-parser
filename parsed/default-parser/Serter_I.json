@@ -1,0 +1,109 @@
+{
+  "name": "Serter I.",
+  "email": "serteriyigunlu@hotmail.com",
+  "phone": "",
+  "address": "",
+  "linkedin": "",
+  "summary": "",
+  "experience": [
+    {
+      "company": "Softaware Developer (), Self-Employed, Brisbane",
+      "position": "",
+      "period": "Junior",
+      "description": [
+        "Q ' YQ B E R   + 0 + +   z   P R E S E N Y",
+        "TBuilt website interfaces with HYML  'SS and Javascript.",
+        "TApplied knowledge of JavaScript and QbjectKQriented Programming to create",
+        "successful designs.",
+        "TDesigned  implemented and monitored web pages  plugins and functionality for",
+        "continuous improvement.",
+        "TMultiKtasked across multiple functions and roles to meet deadlines and",
+        "organiVational expectations.",
+        "TPlanned website development  converting mockups into usable web presence",
+        "with HYML  JavaScript  AJAX  and JSQN coding.",
+        "TDeveloped wireframes  site maps and content inventories for new website",
+        "designs",
+        "Manager, Airport Kebabs, Brisbane",
+        "N Qq E M B E R   + 0 2 4   z   N Qq E M B E R   + 0 2 6",
+        "TMaximised performance by monitoring daily activities and mentoring team",
+        "members.",
+        "TQnboarded new employees with training and new hire documentation.",
+        "TDeveloped and maintained relationships with customers and suppliers through",
+        "account development.",
+        "T'ontrolled labour hours and inventory costs through handsKon management",
+        "and proactive changes.",
+        "Mechanical Engineer, Alkon Energy, Izmir",
+        "F E B RUA R O   + 0 2 +   z   N Qq E M B E R   + 0 2 +",
+        "TWrote and revised maintenance procedures.",
+        "T'onducted research to test and analyse feasibility  design  operation and",
+        "performance of eIuipment  components  and systems.",
+        "TReviewed technical drawings developed by 'AD technicians and drafters.",
+        "Mechanical Engineer, Turkish Airlines, Istanbul",
+        "D E ' E M B E R   + 0 2 0   z   JA N UA R O   + 0 2 +",
+        "TProduced and maintained well documented programs.",
+        "T'ourse organisation for aircraft technicians.",
+        "TPreparation Jying technicians schedule.",
+        "TPrepare aircraft technicians licence  adding aircraft types certi,cates  preparing",
+        "application forms.",
+        "TGenerated system concepts to satisfy product reIuirements."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Diplo",
+      "degree": "ma of IT(Web Development), Coder Academy, Australia",
+      "period": "",
+      "details": [
+        "+ 0 + +   z   + 0 + 3"
+      ]
+    },
+    {
+      "institution": "",
+      "degree": "Master of Engineering (Research Degree), Queensland University of",
+      "period": "",
+      "details": []
+    },
+    {
+      "institution": "Technology Bris",
+      "degree": "bane",
+      "period": "",
+      "details": [
+        "+ 0 2 3   z   + 0 2 5"
+      ]
+    },
+    {
+      "institution": "Diplo",
+      "degree": "ma of Business Management, Martin College, Brisbane",
+      "period": "",
+      "details": [
+        "+ 0 0 7   z   + 0 0 7"
+      ]
+    },
+    {
+      "institution": "Diplo",
+      "degree": "ma of Aircraft Maintenance Engineering, Aviation Australia, Brisbane",
+      "period": "",
+      "details": [
+        "+ 0 0 6   z   + 0 0 7"
+      ]
+    },
+    {
+      "institution": "",
+      "degree": "Bachelor of Engineer, Celal Bayar University, Manisa",
+      "period": "",
+      "details": [
+        "2 9 9 7   z   + 0 0 +"
+      ]
+    }
+  ],
+  "skills": [],
+  "languages": [],
+  "certifications": [],
+  "verificationResults": {
+    "missingContent": [
+      "Serter I.\nDetails\n0405 636 970\nserteriyigunlu@hotmail.com\nLinks\nLinkedin\nGitHub\nTech Skills\nSoftware Engineering\nWriting\nMicrosoft Excel\nEvent Management Software\nUser Experience (UX) Design\nSoftware Design Patterns\nNode.js (Javascript Library)\nMongoDB\nFull Stack Development\nApplication Programming \nInterface (API)\nReact.js (Javascript Library)\nProfile\nPro,cient in various platforms  languages  and embedded systems. Experienced with \nthe latest cutting edge development tools and procedures. - Able to effectively \nselfKmanage during independent projects  as well as collaborate as part of a productive \nteam. •nowledgeable in user interface  testing  and debugging processes. Bringing \nforth expertise in design  installation  testing and maintenance of web systems.-\nProjects\nMERN  Recipe App, Brisbane\nTYhis projects is a recipe app .\nTOou can log in the site to see and add recipes.\nTOou can delete add  change your recipes after logKin.\nTOou can write comments on others recipes after log Kin.\nTBuilt in MERN.\nTavel Log Full Stack Application\nTQur Yravelog app is a dynamic platform designed to bring travelers and explorers \ntogether by allowing them to share their travel experiences.\nTIts core purpose is to create a community of passionate travelers and to build a \ncomprehensive database of travel experiences.\nTMERN stack MongoDB  a NoSCL database Express.js streamlines serverKside \ncoding  and Node.js provides a robust environment for serverKside JavaScript \nexecution  which should mean our app is both fast and scalable. Furthermore  \nReact.js  known for its componentKbased architecture and ef,cient rendering \nwhich will allow us to create a userKfriendly  ef,cient interface that helps users \nenjoy a positive user experience.\nGuess Number Game\nTYhis project is a game about guessing 4 digits number.\nT'omputer generates 4 digits number (First digit can not be 0 and all digits are \ndifferent)  and the user try1s to guess the number.\nTEg. computer chose 2+34 and you guessed 2456  output would be —2  K2 because \nyou did guess correct two digits but one of them is in the correct position and the \nother is not.\nTBuilt with Python.\nInventory Tracker\nTYhis project was about creating an inventory list.\nTBuilt with JavaScript and React.\nRental Management\nTYhis project was about rental managament. It relies on data management only.\nTUsers can provide feedback or enter complaints about any rental place that they \nhave lived.\nTBuilt with PostgeSCL and Flask.\nEmployment History\nSoftaware Developer (Junior), Self-Employed, Brisbane\nQ ' YQ B E R   + 0 + +   z   P R E S E N Y\nTBuilt website interfaces with HYML  'SS and Javascript."
+    ],
+    "coveragePercentage": 50
+  }
+}

@@ -1,0 +1,64 @@
+Serter I.
+Details
+0405 636 970
+serteriyigunlu@hotmail.com
+Links
+Linkedin
+GitHub
+Tech Skills
+Software Engineering
+Writing
+Microsoft Excel
+Event Management Software
+User Experience (UX) Design
+Software Design Patterns
+Node.js (Javascript Library)
+MongoDB
+Full Stack Development
+Application Programming 
+Interface (API)
+React.js (Javascript Library)
+Profile
+Pro,cient in various platforms  languages  and embedded systems. Experienced with 
+the latest cutting edge development tools and procedures. - Able to effectively 
+selfKmanage during independent projects  as well as collaborate as part of a productive 
+team. •nowledgeable in user interface  testing  and debugging processes. Bringing 
+forth expertise in design  installation  testing and maintenance of web systems.-
+Projects
+MERN  Recipe App, Brisbane
+TYhis projects is a recipe app .
+TOou can log in the site to see and add recipes.
+TOou can delete add  change your recipes after logKin.
+TOou can write comments on others recipes after log Kin.
+TBuilt in MERN.
+Tavel Log Full Stack Application
+TQur Yravelog app is a dynamic platform designed to bring travelers and explorers 
+together by allowing them to share their travel experiences.
+TIts core purpose is to create a community of passionate travelers and to build a 
+comprehensive database of travel experiences.
+TMERN stack MongoDB  a NoSCL database Express.js streamlines serverKside 
+coding  and Node.js provides a robust environment for serverKside JavaScript 
+execution  which should mean our app is both fast and scalable. Furthermore  
+React.js  known for its componentKbased architecture and ef,cient rendering 
+which will allow us to create a userKfriendly  ef,cient interface that helps users 
+enjoy a positive user experience.
+Guess Number Game
+TYhis project is a game about guessing 4 digits number.
+T'omputer generates 4 digits number (First digit can not be 0 and all digits are 
+different)  and the user try1s to guess the number.
+TEg. computer chose 2+34 and you guessed 2456  output would be —2  K2 because 
+you did guess correct two digits but one of them is in the correct position and the 
+other is not.
+TBuilt with Python.
+Inventory Tracker
+TYhis project was about creating an inventory list.
+TBuilt with JavaScript and React.
+Rental Management
+TYhis project was about rental managament. It relies on data management only.
+TUsers can provide feedback or enter complaints about any rental place that they 
+have lived.
+TBuilt with PostgeSCL and Flask.
+Employment History
+Softaware Developer (Junior), Self-Employed, Brisbane
+Q ' YQ B E R   + 0 + +   z   P R E S E N Y
+TBuilt website interfaces with HYML  'SS and Javascript.

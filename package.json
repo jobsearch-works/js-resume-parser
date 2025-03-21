@@ -5,7 +5,10 @@
   "main": "resumeParser.js",
   "scripts": {
     "start": "node resumeParser.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serter": "node serterParser.js",
+    "parse-all": "node parseAllResumes.js",
+    "generate-stats": "node generateParserStats.js"
   },
   "dependencies": {
     "pdf-parse": "^1.1.1"

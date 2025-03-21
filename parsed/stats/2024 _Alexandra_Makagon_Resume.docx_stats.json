@@ -1,0 +1,38 @@
+{
+  "fileName": "2024 _Alexandra_Makagon_Resume.docx",
+  "parsers": {
+    "default": {
+      "name": true,
+      "email": true,
+      "phone": true,
+      "linkedin": false,
+      "location": false,
+      "experienceCount": 10,
+      "educationCount": 23,
+      "skillsCount": 30,
+      "projectsCount": 0,
+      "languagesCount": 10,
+      "certificationsCount": 0,
+      "coveragePercentage": 100,
+      "missingContentCount": 0
+    },
+    "serter": {
+      "name": true,
+      "email": true,
+      "phone": true,
+      "linkedin": false,
+      "location": true,
+      "experienceCount": 31,
+      "educationCount": 16,
+      "skillsCount": 0,
+      "projectsCount": 0,
+      "languagesCount": 0,
+      "certificationsCount": 0,
+      "coveragePercentage": 0,
+      "missingContentCount": 0
+    }
+  },
+  "fileSize": 220,
+  "timestamp": "2025-03-21T19:41:22.636Z",
+  "bestParser": "default"
+}
