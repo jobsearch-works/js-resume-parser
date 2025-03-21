@@ -44,6 +44,7 @@ A JavaScript tool for parsing resume files (PDF format) and extracting structure
 - Intelligent section detection using common section headers
 - Handles various resume formats and layouts
 - **Verification System**: Identifies and reports content from the PDF that might be missing in the parsed output
+- **Schema Validation**: Ensures all parsers produce standardized output format regardless of resume type
 
 ## Architecture
 
@@ -63,9 +64,16 @@ The system follows a modular architecture with a clear separation of concerns:
    - Organizes output into appropriate directories
 
 3. **Verification System**:
+
    - The `verificationUtils.js` module provides content verification
    - Identifies missing or incomplete parsing results
    - Helps improve parser accuracy
+
+4. **Schema Validation System**:
+   - Ensures consistent output structure across all parsers
+   - Validates parser results against a standardized schema
+   - Provides fallback values for missing fields
+   - Makes parsers interchangeable for downstream applications
 
 This architecture makes the system easy to extend with new parsers and maintain existing ones.
 
@@ -86,47 +94,31 @@ npm install
 
 ## Usage
 
-You can choose to run a specific parser or the universal parser:
+You can use the resume parsing system in multiple ways:
 
-### General-purpose Parser
+### List Available Parsers
+
+```
+npm run list-parsers
+```
+
+or
+
+```
+node listParsers.js
+```
+
+This will display all registered parsers with their IDs, names, and descriptions.
+
+### Universal Parser (Recommended)
+
+Runs all available parsers on all resumes:
 
 ```
 npm start
 ```
 
 or
-
-```
-node resumeParser.js
-```
-
-### Serter Format Parser
-
-```
-npm run serter
-```
-
-or
-
-```
-node serterParser.js
-```
-
-### Modern Student Format Parser
-
-```
-npm run student
-```
-
-or
-
-```
-node resumeParser1.js
-```
-
-### Universal Parser (Recommended)
-
-Runs all available parsers on all resumes:
 
 ```
 npm run parse-all
@@ -136,6 +128,26 @@ or
 
 ```
 node parseAllResumes.js
+```
+
+### Parse a Single Resume
+
+You can parse a single resume with a specific parser or all available parsers:
+
+```
+npm run parse-one -- --resume=resumes/example.pdf --parser=default
+```
+
+or
+
+```
+node parseOneResume.js --resume=resumes/example.pdf --parser=default
+```
+
+If you omit the parser parameter, all parsers will be used:
+
+```
+node parseOneResume.js --resume=resumes/example.pdf
 ```
 
 ### Generate Statistics (Optional)
@@ -150,6 +162,20 @@ or
 
 ```
 node generateParserStats.js
+```
+
+### Test Schema Validation
+
+To verify that all parsers produce standardized output structure:
+
+```
+npm run test-schema
+```
+
+or
+
+```
+node testSchema.js
 ```
 
 The parsers will:
@@ -217,6 +243,27 @@ The verification system analyzes the parsed output against the original PDF text
 - Saves missing content to separate files in the respective parser's directory for manual inspection
 
 This helps identify edge cases, unusual formatting, or sections that the parser might have missed, allowing you to improve the parsing accuracy.
+
+## Schema Validation System
+
+The schema validation system ensures that all parsers produce a consistent output format:
+
+- Enforces a standardized structure for all parser outputs
+- Validates all required fields are present in the output
+- Provides default values (empty arrays or strings) for missing fields
+- Allows parsers to be used interchangeably in downstream applications
+- Simplifies integration of new parser implementations
+
+The schema includes standardized fields for:
+
+- Basic information (name, email, phone, LinkedIn, GitHub, address)
+- Professional experience with company details and responsibilities
+- Education with institution details and study periods
+- Skills categorized by type
+- Projects with descriptions and links
+- Additional sections like certifications, languages, honors, and references
+
+For details on the schema structure and field descriptions, see the [SCHEMA_DOCS.md](SCHEMA_DOCS.md) file.
 
 ## How It Works
 

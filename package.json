@@ -2,14 +2,15 @@
   "name": "js-resume-parser",
   "version": "1.0.0",
   "description": "JavaScript parser for resume files",
-  "main": "resumeParser.js",
+  "main": "parseAllResumes.js",
   "scripts": {
-    "start": "node resumeParser.js",
+    "start": "node parseAllResumes.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serter": "node serterParser.js",
-    "student": "node resumeParser1.js",
+    "parse-one": "node parseOneResume.js",
     "parse-all": "node parseAllResumes.js",
-    "generate-stats": "node generateParserStats.js"
+    "generate-stats": "node generateParserStats.js",
+    "test-schema": "node testSchema.js",
+    "list-parsers": "node listParsers.js"
   },
   "dependencies": {
     "pdf-parse": "^1.1.1"

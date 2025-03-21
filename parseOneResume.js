@@ -7,10 +7,11 @@ const {
 } = require("./verificationUtils");
 
 /**
- * Process a single resume with all available parsers
+ * Process a single resume with a specific parser or all available parsers
  * @param {string} resumeFilePath - Path to the resume file to process
+ * @param {string} [parserName] - Specific parser to use (optional)
  */
-async function parseOneResume(resumeFilePath) {
+async function parseOneResume(resumeFilePath, parserName = null) {
   try {
     // Verify the file exists
     if (!fs.existsSync(resumeFilePath)) {
@@ -33,13 +34,33 @@ async function parseOneResume(resumeFilePath) {
 
     // Get list of all available parsers
     const availableParsers = listParsers();
-    console.log(`Found ${availableParsers.length} parsers:`);
-    availableParsers.forEach((parser) => {
-      console.log(`- ${parser.displayName}: ${parser.description}`);
-    });
+
+    // If a specific parser was requested, filter the list
+    let parsersToUse = availableParsers;
+    if (parserName) {
+      const requestedParser = availableParsers.find(
+        (p) => p.name === parserName
+      );
+      if (!requestedParser) {
+        console.error(
+          `Error: Parser "${parserName}" not found. Available parsers are:`
+        );
+        availableParsers.forEach((p) =>
+          console.log(`- ${p.name} (${p.displayName})`)
+        );
+        return;
+      }
+      parsersToUse = [requestedParser];
+      console.log(`Using parser: ${requestedParser.displayName}`);
+    } else {
+      console.log(`Using all ${availableParsers.length} parsers:`);
+      availableParsers.forEach((parser) => {
+        console.log(`- ${parser.displayName}: ${parser.description}`);
+      });
+    }
 
     // Create directories for each parser if they don't exist
-    for (const parser of availableParsers) {
+    for (const parser of parsersToUse) {
       const parserDir = path.join(parsedDir, `${parser.name}-parser`);
       if (!fs.existsSync(parserDir)) {
         fs.mkdirSync(parserDir);
@@ -66,8 +87,8 @@ async function parseOneResume(resumeFilePath) {
       return;
     }
 
-    // Process with each parser
-    for (const parser of availableParsers) {
+    // Process with each selected parser
+    for (const parser of parsersToUse) {
       try {
         console.log(`\n[${parser.displayName.toUpperCase()}]`);
 
@@ -101,7 +122,7 @@ async function parseOneResume(resumeFilePath) {
       `\nAll results have been saved to separate folders in the 'parsed' directory:`
     );
 
-    availableParsers.forEach((parser) => {
+    parsersToUse.forEach((parser) => {
       console.log(
         `- ${parser.displayName} results: parsed/${parser.name}-parser/`
       );
@@ -173,18 +194,48 @@ function logParserResults(result, verificationResults) {
   }
 }
 
-// Check if run directly (node parseOneResume.js <path-to-resume>)
-if (require.main === module) {
+/**
+ * Parse command line arguments
+ * @returns {Object} Object containing parsed arguments
+ */
+function parseCommandLineArgs() {
   const args = process.argv.slice(2);
+  const result = {
+    resumeFilePath: null,
+    parserName: null,
+  };
 
-  if (args.length === 0) {
+  for (const arg of args) {
+    if (arg.startsWith("--parser=")) {
+      result.parserName = arg.substring("--parser=".length);
+    } else if (arg.startsWith("--resume=")) {
+      result.resumeFilePath = arg.substring("--resume=".length);
+    } else if (!arg.startsWith("--")) {
+      // If not a flag and no resume path is set yet, assume it's the resume path
+      if (!result.resumeFilePath) {
+        result.resumeFilePath = arg;
+      }
+    }
+  }
+
+  return result;
+}
+
+// Check if run directly
+if (require.main === module) {
+  const args = parseCommandLineArgs();
+
+  if (!args.resumeFilePath) {
     console.error("Error: Please provide a path to a resume file");
-    console.log("Usage: node parseOneResume.js <path-to-resume-file>");
+    console.log(
+      "Usage: node parseOneResume.js [--parser=<parser-name>] --resume=<path-to-resume-file>"
+    );
+    console.log("   or: node parseOneResume.js <path-to-resume-file>");
     process.exit(1);
   }
 
-  const resumeFilePath = path.resolve(args[0]);
-  parseOneResume(resumeFilePath).catch((error) => {
+  const resumeFilePath = path.resolve(args.resumeFilePath);
+  parseOneResume(resumeFilePath, args.parserName).catch((error) => {
     console.error("Error:", error);
   });
 }

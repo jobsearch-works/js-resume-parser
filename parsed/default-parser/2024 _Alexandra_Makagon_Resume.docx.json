@@ -1,15 +1,21 @@
 {
   "name": "Alexandra Makagon",
+  "title": "",
   "email": "alexandramkgn@gmail.com",
   "phone": "+61434198310",
-  "address": "",
   "linkedin": "",
+  "github": "",
+  "address": "",
+  "location": "",
   "summary": "",
   "experience": [
     {
-      "company": "Enterprise Data Architect, Macquarie Group, banking and financial services. Sydney, Australia ( -",
+      "title": "",
       "position": "",
+      "company": "Enterprise Data Architect, Macquarie Group, banking and financial services. Sydney, Australia ( -",
+      "location": "",
       "period": "June 2023",
+      "responsibilities": [],
       "description": [
         "Present). https://www.macquarie.com.au",
         "● Lead data modeling practice across the whole Macquarie enterprise (CGM, RMG, BFS, MacCap,",
@@ -30,9 +36,12 @@
       ]
     },
     {
-      "company": "integration for  release",
+      "title": "",
       "position": "",
+      "company": "integration for  release",
+      "location": "",
       "period": "market",
+      "responsibilities": [],
       "description": [
         "● Design architecture and integration patterns for medallion architecture AWS data platforms: AWS S3,",
         "Hive Metastore, Airflow, Starburst Presto, Redshift",
@@ -46,9 +55,12 @@
       ]
     },
     {
-      "company": "Modeler, Erwin , Erwin ER360, Microsoft Active Directory SSO, Jira, BitBucket, Starburst/Hive,",
+      "title": "",
       "position": "",
+      "company": "Modeler, Erwin , Erwin ER360, Microsoft Active Directory SSO, Jira, BitBucket, Starburst/Hive,",
+      "location": "",
       "period": "Mart",
+      "responsibilities": [],
       "description": [
         "Redshift, JSON, BigQuery, Azure VM for MacOS)",
         "- Delivered enterprise Data Modelling Framework, actively operationalised across all Macquarie groups",
@@ -61,15 +73,21 @@
       ]
     },
     {
-      "company": "Data Services Officer, Charter Hall, vertically integrated investment fund. Sydney, Australia ( –",
+      "title": "",
       "position": "",
+      "company": "Data Services Officer, Charter Hall, vertically integrated investment fund. Sydney, Australia ( –",
+      "location": "",
       "period": "April 2021",
+      "responsibilities": [],
       "description": []
     },
     {
-      "company": "). https://www.charterhall.com.au",
+      "title": "",
       "position": "",
+      "company": "). https://www.charterhall.com.au",
+      "location": "",
       "period": "June 2023",
+      "responsibilities": [],
       "description": [
         "● Led data and business intelligence function",
         "● Managed end to end group data infrastructure (Azure)",
@@ -111,9 +129,12 @@
       ]
     },
     {
-      "company": "Business Intelligence Developer, Charter Hall (Australia ().",
+      "title": "",
       "position": "",
+      "company": "Business Intelligence Developer, Charter Hall (Australia ().",
+      "location": "",
       "period": "December 2019 – April 2021",
+      "responsibilities": [],
       "description": [
         "● Designed BI solutions and underlying physical architecture across all Microsoft BI layers: SSIS source",
         "system data loading, dimensional data warehouse design, AAS tabular data modeling, PowerBi",
@@ -144,9 +165,12 @@
       ]
     },
     {
-      "company": "PowerBi Developer, Charter Hall ().",
+      "title": "",
       "position": "",
+      "company": "PowerBi Developer, Charter Hall ().",
+      "location": "",
       "period": "October 2018 – December 2019",
+      "responsibilities": [],
       "description": [
         "● Rolled out numerous enterprise grade PowerBi service reports for Fund management, Property",
         "operations, Investor Relationships, Leasing activities, consumed by business analysts, mid-level and",
@@ -171,9 +195,12 @@
       ]
     },
     {
-      "company": "Business Development Analyst, HASSELL, architecture practice. Sydney, Australia ().",
+      "title": "",
       "position": "",
+      "company": "Business Development Analyst, HASSELL, architecture practice. Sydney, Australia ().",
+      "location": "",
       "period": "May 2016 – Present",
+      "responsibilities": [],
       "description": [
         "https://www.hassellstudio.com",
         "● Performed PowerBi data modelling aggregating and reconciling data from multiple databases (CRM",
@@ -184,9 +211,12 @@
       ]
     },
     {
-      "company": "Sector senior management",
+      "title": "",
       "position": "",
+      "company": "Sector senior management",
+      "location": "",
       "period": "Market",
+      "responsibilities": [],
       "description": [
         "● Defined ETL process and structure underlying PowerBi core data model for secure and efficient data",
         "sourcing",
@@ -207,9 +237,12 @@
       ]
     },
     {
-      "company": "development, Executive board, HR, Finance,",
+      "title": "",
       "position": "",
+      "company": "development, Executive board, HR, Finance,",
+      "location": "",
       "period": "Marketing",
+      "responsibilities": [],
       "description": [
         "● Wrote SQL queries to interrogate SQL server databases directly for ad hoc in-depth data analysis",
         "Accomplishments:",
@@ -223,54 +256,62 @@
   ],
   "education": [
     {
-      "institution": "). http://www.onlinecoursesaustralia.edu.au/",
       "degree": "",
+      "institution": "). http://www.onlinecoursesaustralia.edu.au/",
+      "location": "",
       "period": "2016",
       "details": []
     },
     {
-      "institution": "● Administrated cross system data",
       "degree": "management and supervised IT data integrity projects",
+      "institution": "● Administrated cross system data",
+      "location": "",
       "period": "",
       "details": [
         "● Scoped Salesforce and partner API integrations"
       ]
     },
     {
-      "institution": "● Issued monthly",
       "degree": "marketing and sales performance reports with tactical and strategic recommendations",
+      "institution": "● Issued monthly",
+      "location": "",
       "period": "",
       "details": []
     },
     {
-      "institution": "to CEO senior",
       "degree": "management, and Board of investors",
+      "institution": "to CEO senior",
+      "location": "",
       "period": "",
       "details": []
     },
     {
-      "institution": "● Administrated sales and",
       "degree": "marketing reports and dashboards across Salesforce, Pardot and Google",
+      "institution": "● Administrated sales and",
+      "location": "",
       "period": "",
       "details": [
         "Analytics"
       ]
     },
     {
-      "institution": "● Designed",
       "degree": "marketing automations and drip EDM campaign logic in Pardot",
+      "institution": "● Designed",
+      "location": "",
       "period": "",
       "details": []
     },
     {
-      "institution": "● Provided customer",
       "degree": "base segmentation and cluster analysis in SPSS",
+      "institution": "● Provided customer",
+      "location": "",
       "period": "",
       "details": []
     },
     {
-      "institution": "● Interrogated SQL student data",
       "degree": "base to design post acquisition campaigns, up sell and cross sell sales",
+      "institution": "● Interrogated SQL student data",
+      "location": "",
       "period": "",
       "details": [
         "campaigns, increase length of student lifecycle and course completion rates",
@@ -279,14 +320,16 @@
       ]
     },
     {
-      "institution": "● Formulated forecasting logic for sales and",
       "degree": "marketing teams",
+      "institution": "● Formulated forecasting logic for sales and",
+      "location": "",
       "period": "",
       "details": []
     },
     {
-      "institution": "● Analyzed",
       "degree": "marketing channel performance and advised on marketing channels portfolio management",
+      "institution": "● Analyzed",
+      "location": "",
       "period": "",
       "details": [
         "Accomplishments:",
@@ -294,92 +337,105 @@
       ]
     },
     {
-      "institution": "- Wrote solution logic and supervised implementation of",
       "degree": "marketing channel tracking consolidation",
+      "institution": "- Wrote solution logic and supervised implementation of",
+      "location": "",
       "period": "",
       "details": [
         "- Delivered Delacon call tracking implementation"
       ]
     },
     {
-      "institution": "- Delivered Pardot",
       "degree": "marketing automation implementation",
+      "institution": "- Delivered Pardot",
+      "location": "",
       "period": "",
       "details": []
     },
     {
-      "institution": "- Introduced monthly perfor",
       "degree": "mance reports",
+      "institution": "- Introduced monthly perfor",
+      "location": "",
       "period": "",
       "details": []
     },
     {
-      "institution": "Various Roles in Analytics IT Development and Project Management Various companies (June  –",
       "degree": "Management, Various companies (June 2007 –",
+      "institution": "Various Roles in Analytics IT Development and Project Management Various companies (June  –",
+      "location": "",
       "period": "2007",
       "details": []
     },
     {
-      "institution": "May )",
       "degree": "May 2015)",
+      "institution": "May )",
+      "location": "",
       "period": "2015",
       "details": [
         "The Open Group"
       ]
     },
     {
-      "institution": "TOGAF Enterprise Architecture Practitioner (TOGAF 10)  (September )",
       "degree": "",
+      "institution": "TOGAF Enterprise Architecture Practitioner (TOGAF 10)  (September )",
+      "location": "",
       "period": "2024",
       "details": [
         "AWS"
       ]
     },
     {
-      "institution": "Architecting Solutions on AWS (June )",
       "degree": "",
+      "institution": "Architecting Solutions on AWS (June )",
+      "location": "",
       "period": "2024",
       "details": [
         "Databricks"
       ]
     },
     {
-      "institution": "Data Engineering with Databricks (September )",
       "degree": "",
+      "institution": "Data Engineering with Databricks (September )",
+      "location": "",
       "period": "2022",
       "details": [
         "Melbourne Business School"
       ]
     },
     {
-      "institution": "MBA concentration in Strategy. Melbourne Australia ().",
       "degree": "MBA, concentration in Strategy. Melbourne, Australia (September 2011 - December 2011).",
+      "institution": "MBA concentration in Strategy. Melbourne Australia ().",
+      "location": "",
       "period": "September 2011 - December 2011",
       "details": [
         "Tel Aviv University"
       ]
     },
     {
-      "institution": "MBA. Sofaer MBA Scholarship. Tel Aviv Israel ().",
       "degree": "MBA. Sofaer MBA Scholarship. Tel Aviv, Israel (September 2010 - August 2011).",
+      "institution": "MBA. Sofaer MBA Scholarship. Tel Aviv Israel ().",
+      "location": "",
       "period": "September 2010 - August 2011",
       "details": []
     },
     {
-      "institution": "Russian State University for the Hu",
       "degree": "manities",
+      "institution": "Russian State University for the Hu",
+      "location": "",
       "period": "",
       "details": []
     },
     {
-      "institution": "",
       "degree": "Bachelor and Masters of Science in Psychology. Russian State University for the Humanities Scholarship.",
+      "institution": "",
+      "location": "",
       "period": "",
       "details": []
     },
     {
-      "institution": "Moscow Russia ().",
       "degree": "",
+      "institution": "Moscow Russia ().",
+      "location": "",
       "period": "September 2004 -December 2009",
       "details": []
     }
@@ -428,5 +484,8 @@
     "Content management and analysis: Umbraco, Magento, PhraseApp, Inspectlet (heatmaps), custom CMS`s",
     "REFERENCES: On request."
   ],
-  "certifications": []
+  "certifications": [],
+  "projects": [],
+  "honors": [],
+  "references": []
 }
