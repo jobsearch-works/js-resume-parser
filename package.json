@@ -1,0 +1,13 @@
+{
+  "name": "js-resume-parser",
+  "version": "1.0.0",
+  "description": "JavaScript parser for resume files",
+  "main": "resumeParser.js",
+  "scripts": {
+    "start": "node resumeParser.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "pdf-parse": "^1.1.1"
+  }
+}
