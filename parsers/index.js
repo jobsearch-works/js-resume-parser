@@ -9,53 +9,68 @@ const serterParser = require("./serter-parser");
 const studentParser = require("./student-parser");
 const { validateAndNormalize } = require("./schema");
 
-// Create a registry object with all available parsers
+// Registry of available parsers
 const parsers = {
-  // Default parser - general purpose resume parser
   default: defaultParser,
-
-  // Specialized parsers for specific resume formats
   serter: serterParser,
   student: studentParser,
 };
 
 /**
  * Get a specific parser by name
- * @param {string} parserName - The name of the parser to retrieve
- * @returns {Object} - The requested parser or the default parser if not found
+ * @param {string} name - The name of the parser to get
+ * @returns {Object} - The parser object or null if not found
  */
-function getParser(parserName) {
-  return parsers[parserName] || parsers.default;
+function getParser(name) {
+  return parsers[name] || null;
 }
 
 /**
  * Get a list of all available parsers
- * @returns {Array} - Array of parser objects with name, displayName and description
+ * @returns {Array} - Array of parser objects
  */
 function listParsers() {
-  return Object.values(parsers).map((parser) => ({
-    name: parser.name,
-    displayName: parser.displayName,
-    description: parser.description,
-  }));
+  return Object.values(parsers);
 }
 
 /**
- * Parse a resume with a specific parser
- * @param {string} resumeFilePath - Path to the resume file
- * @param {string} parserName - Name of the parser to use (optional, uses default if not specified)
- * @returns {Promise<Object>} - The parsed resume data, validated and normalized according to the schema
+ * Parse resume text using the specified parser or all available parsers
+ * @param {string} text - The resume text to parse
+ * @param {string} [parserName] - Optional name of specific parser to use
+ * @returns {Promise<Object>} - Parsed resume data
  */
-async function parseResume(resumeFilePath, parserName = "default") {
-  const parser = getParser(parserName);
+async function parseResume(text, parserName = null) {
+  if (!text) {
+    throw new Error("Resume text is required");
+  }
 
-  // Get the raw parsed data from the parser
-  const rawParsedData = await parser.parse(resumeFilePath);
+  if (parserName) {
+    const parser = getParser(parserName);
+    if (!parser) {
+      throw new Error(`Parser "${parserName}" not found`);
+    }
+    return await parser.parse(text);
+  }
 
-  // Validate and normalize the data according to our schema
-  const normalizedData = validateAndNormalize(rawParsedData);
+  // If no specific parser requested, try all parsers and return the best result
+  const results = await Promise.all(
+    Object.values(parsers).map(async (parser) => {
+      try {
+        return await parser.parse(text);
+      } catch (error) {
+        console.error(`Error with ${parser.displayName}: ${error.message}`);
+        return null;
+      }
+    })
+  );
 
-  return normalizedData;
+  // Filter out failed results and return the first successful one
+  const validResults = results.filter((result) => result !== null);
+  if (validResults.length === 0) {
+    throw new Error("All parsers failed to parse the resume");
+  }
+
+  return validResults[0];
 }
 
 module.exports = {

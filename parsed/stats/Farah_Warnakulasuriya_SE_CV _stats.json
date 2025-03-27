@@ -32,8 +32,8 @@
       "honorsCount": 0,
       "languagesCount": 0,
       "certificationsCount": 0,
-      "coveragePercentage": 100,
-      "missingContentCount": 0
+      "coveragePercentage": 50,
+      "missingContentCount": 1
     },
     "student": {
       "name": true,
@@ -49,11 +49,11 @@
       "honorsCount": 0,
       "languagesCount": 0,
       "certificationsCount": 0,
-      "coveragePercentage": 100,
-      "missingContentCount": 0
+      "coveragePercentage": 0,
+      "missingContentCount": 2
     }
   },
   "fileSize": 98,
-  "timestamp": "2025-03-21T21:30:17.436Z",
-  "bestParser": "serter"
+  "timestamp": "2025-03-26T12:56:33.291Z",
+  "bestParser": "default"
 }

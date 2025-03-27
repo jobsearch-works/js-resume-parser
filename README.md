@@ -1,10 +1,10 @@
 # JavaScript Resume Parser
 
-A JavaScript tool for parsing resume files (PDF format) and extracting structured information.
+A JavaScript tool for parsing resume text and extracting structured information. The parser can handle both text input directly and PDF files.
 
 ## Features
 
-- Extracts comprehensive information from resume PDFs:
+- Extracts comprehensive information from resume text:
   - Basic Information:
     - Name
     - Email address
@@ -43,7 +43,7 @@ A JavaScript tool for parsing resume files (PDF format) and extracting structure
 - Saves parsed results as JSON files in the 'parsed' directory
 - Intelligent section detection using common section headers
 - Handles various resume formats and layouts
-- **Verification System**: Identifies and reports content from the PDF that might be missing in the parsed output
+- **Verification System**: Identifies and reports content that might be missing in the parsed output
 - **Schema Validation**: Ensures all parsers produce standardized output format regardless of resume type
 
 ## Architecture
@@ -52,7 +52,7 @@ The system follows a modular architecture with a clear separation of concerns:
 
 1. **Parser Modules**:
 
-   - Each parser (`resumeParser.js`, `serterParser.js`, `resumeParser1.js`) is responsible only for extracting and structuring data
+   - Each parser (`default-parser.js`, `serter-parser.js`, `student-parser.js`) is responsible only for extracting and structuring data
    - Parsers implement specialized logic for different resume formats
    - Parsers return structured JSON data without writing to disk
 
@@ -81,14 +81,14 @@ This architecture makes the system easy to extend with new parsers and maintain 
 
 1. Clone the repository:
 
-```
+```bash
 git clone https://github.com/jobsearch-works/js-resume-parser.git
 cd js-resume-parser
 ```
 
 2. Install dependencies:
 
-```
+```bash
 npm install
 ```
 
@@ -98,13 +98,13 @@ You can use the resume parsing system in multiple ways:
 
 ### List Available Parsers
 
-```
+```bash
 npm run list-parsers
 ```
 
 or
 
-```
+```bash
 node listParsers.js
 ```
 
@@ -112,41 +112,53 @@ This will display all registered parsers with their IDs, names, and descriptions
 
 ### Universal Parser (Recommended)
 
-Runs all available parsers on all resumes:
+Runs all available parsers on the input:
 
-```
+```bash
 npm start
 ```
 
 or
 
-```
+```bash
 npm run parse-all
 ```
 
 or
 
-```
-node parseAllResumes.js
+```bash
+node parseAllResumes.js --text="your resume text here"
 ```
 
 ### Parse a Single Resume
 
 You can parse a single resume with a specific parser or all available parsers:
 
-```
+```bash
+# Using text input
+npm run parse-one -- --text="your resume text here" --parser=default
+
+# Using PDF file
 npm run parse-one -- --resume=resumes/example.pdf --parser=default
 ```
 
 or
 
-```
+```bash
+# Using text input
+node parseOneResume.js --text="your resume text here" --parser=default
+
+# Using PDF file
 node parseOneResume.js --resume=resumes/example.pdf --parser=default
 ```
 
 If you omit the parser parameter, all parsers will be used:
 
-```
+```bash
+# Using text input
+node parseOneResume.js --text="your resume text here"
+
+# Using PDF file
 node parseOneResume.js --resume=resumes/example.pdf
 ```
 
@@ -154,13 +166,13 @@ node parseOneResume.js --resume=resumes/example.pdf
 
 After running the parsers, you can generate comparative statistics:
 
-```
+```bash
 npm run generate-stats
 ```
 
 or
 
-```
+```bash
 node generateParserStats.js
 ```
 
@@ -168,19 +180,19 @@ node generateParserStats.js
 
 To verify that all parsers produce standardized output structure:
 
-```
+```bash
 npm run test-schema
 ```
 
 or
 
-```
+```bash
 node testSchema.js
 ```
 
 The parsers will:
 
-- Process all resume files in the 'resumes' folder
+- Process the input resume text or PDF files
 - Display a summary of extracted information in the console
 - Save detailed results as JSON files in the 'parsed' folder
 - Verify completeness and identify potentially missing content
@@ -234,9 +246,9 @@ Specialized for student and recent graduate resumes with enhanced capabilities f
 
 ## Verification System
 
-The verification system analyzes the parsed output against the original PDF text to ensure completeness:
+The verification system analyzes the parsed output against the original text to ensure completeness:
 
-- Breaks the PDF text into meaningful chunks
+- Breaks the text into meaningful chunks
 - Checks if each chunk is represented in the parsed output
 - Calculates a coverage percentage to measure parsing completeness
 - Identifies and reports potentially missing content for review
@@ -286,7 +298,7 @@ You can modify the parser files to:
 
 ## Dependencies
 
-- [pdf-parse](https://www.npmjs.com/package/pdf-parse): For parsing PDF files
+- [pdf-parse](https://www.npmjs.com/package/pdf-parse): For parsing PDF files (optional)
 
 ## License
 

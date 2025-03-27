@@ -1,7 +1,0 @@
-Marketing automations and EDM systems: Mailchimp, Pardot 
-Online marketing analysis: Google Analytics (attribution modelling), Optimizely (A/B and multivariate testing), 
-Pardot (lead nurturing and closed loop marketing analytics), Qlikview 
-Online advertising platforms: Adwords, Critero, Adroll, Facebook, Bing Ads 
-Content management and analysis: Umbraco, Magento, PhraseApp, Inspectlet (heatmaps), custom CMS`s 
- 
-REFERENCES: On request.

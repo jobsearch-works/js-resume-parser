@@ -1,0 +1,80 @@
+{
+  "name": "John Doe",
+  "email": "john.doe@email.com",
+  "phone": "(555) 123-4567",
+  "address": "",
+  "linkedin": "linkedin.com/in/johndoe",
+  "summary": "",
+  "experience": [
+    {
+      "company": "San Francisco, CA |",
+      "position": "",
+      "period": "Jan 2020 - Present",
+      "description": [
+        "• Led development of microservices architecture, reducing system latency by 40%",
+        "• Implemented CI/CD pipeline using Jenkins and Docker"
+      ]
+    },
+    {
+      "company": "• Mentored 3  developers and conducted code reviews",
+      "position": "",
+      "period": "junior",
+      "description": [
+        "Software Engineer at StartupX"
+      ]
+    },
+    {
+      "company": "San Francisco, CA |",
+      "position": "",
+      "period": "Mar 2018 - Dec 2019",
+      "description": [
+        "• Developed and maintained React-based frontend applications",
+        "• Built RESTful APIs using Node.js and Express",
+        "• Collaborated with UX team to implement responsive designs"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "",
+      "degree": "Bachelor of Science in Computer Science",
+      "period": "",
+      "details": [
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "institution": "",
+      "degree": "",
+      "period": "2014 - 2018",
+      "details": [
+        "• GPA: 3.8/4.0",
+        "• Dean's List all semesters"
+      ]
+    }
+  ],
+  "skills": [],
+  "languages": [
+    "• Frontend: React, Angular, Vue.js",
+    "• Backend: Node.js, Express, Django",
+    "• Databases: MongoDB, PostgreSQL",
+    "• Tools: Git, Docker, AWS",
+    "• Other: Agile, Scrum, CI/CD",
+    "PROJECTS",
+    "E-commerce Platform (2021 - Present)",
+    "• Built a full-stack e-commerce solution using MERN stack",
+    "• Implemented real-time inventory management",
+    "• Integrated payment processing with Stripe",
+    "Task Management App (2020)",
+    "• Developed a collaborative task management tool",
+    "• Used React for frontend and Node.js for backend",
+    "• Implemented real-time updates using Socket.io",
+    "• English (Native)",
+    "• Spanish (Professional Working Proficiency)"
+  ],
+  "certifications": [
+    "• AWS Certified Solutions Architect",
+    "• Certified Scrum Master",
+    "• Google Cloud Professional Developer"
+  ]
+}

@@ -7,25 +7,13 @@ const {
 } = require("./verificationUtils");
 
 /**
- * Process a single resume with a specific parser or all available parsers
- * @param {string} resumeFilePath - Path to the resume file to process
+ * Process resume text with a specific parser or all available parsers
+ * @param {string} text - The resume text to process
  * @param {string} [parserName] - Specific parser to use (optional)
+ * @param {string} [fileName] - Optional name to use for output files
  */
-async function parseOneResume(resumeFilePath, parserName = null) {
+async function parseOneResume(text, parserName = null, fileName = "resume") {
   try {
-    // Verify the file exists
-    if (!fs.existsSync(resumeFilePath)) {
-      console.error(`Error: File "${resumeFilePath}" does not exist`);
-      return;
-    }
-
-    // Verify file extension is supported
-    const ext = path.extname(resumeFilePath).toLowerCase();
-    if (ext !== ".pdf" && !resumeFilePath.toLowerCase().endsWith(".docx.pdf")) {
-      console.error(`Error: Only PDF files are supported, got "${ext}"`);
-      return;
-    }
-
     // Create the output directories
     const parsedDir = path.join(__dirname, "parsed");
     if (!fs.existsSync(parsedDir)) {
@@ -38,9 +26,7 @@ async function parseOneResume(resumeFilePath, parserName = null) {
     // If a specific parser was requested, filter the list
     let parsersToUse = availableParsers;
     if (parserName) {
-      const requestedParser = availableParsers.find(
-        (p) => p.name === parserName
-      );
+      const requestedParser = availableParsers.find((p) => p.name === parserName);
       if (!requestedParser) {
         console.error(
           `Error: Parser "${parserName}" not found. Available parsers are:`
@@ -67,47 +53,30 @@ async function parseOneResume(resumeFilePath, parserName = null) {
       }
     }
 
-    const fileName = path.basename(resumeFilePath);
-    const baseName = path.basename(
-      resumeFilePath,
-      path.extname(resumeFilePath)
-    );
-
-    console.log(`\nProcessing: ${fileName}`);
+    console.log(`\nProcessing resume text`);
     console.log("--------------------------------------------------");
-
-    // Get the original text content for verification
-    let originalText = "";
-    try {
-      const dataBuffer = fs.readFileSync(resumeFilePath);
-      const pdfData = await require("pdf-parse")(dataBuffer);
-      originalText = pdfData.text;
-    } catch (error) {
-      console.error(`Error reading original text: ${error.message}`);
-      return;
-    }
 
     // Process with each selected parser
     for (const parser of parsersToUse) {
       try {
         console.log(`\n[${parser.displayName.toUpperCase()}]`);
 
-        // Get parser result (no file saving in the parser)
-        const result = await parseResume(resumeFilePath, parser.name);
+        // Get parser result
+        const result = await parseResume(text, parser.name);
 
         // Verify content
-        const verificationResults = verifyParsedContent(originalText, result);
+        const verificationResults = verifyParsedContent(text, result);
 
         // Create the parser directory path
         const parserDir = path.join(parsedDir, `${parser.name}-parser`);
 
         // Save JSON output
-        const outputPath = path.join(parserDir, `${baseName}.json`);
+        const outputPath = path.join(parserDir, `${fileName}.json`);
         fs.writeFileSync(outputPath, JSON.stringify(result, null, 2));
         console.log(`${parser.displayName} result saved to: ${outputPath}`);
 
         // Save verification results separately
-        saveVerificationResults(verificationResults, parserDir, baseName);
+        saveVerificationResults(verificationResults, parserDir, fileName);
 
         // Log results
         console.log(`${parser.displayName} extracted:`);
@@ -201,19 +170,22 @@ function logParserResults(result, verificationResults) {
 function parseCommandLineArgs() {
   const args = process.argv.slice(2);
   const result = {
-    resumeFilePath: null,
+    text: null,
     parserName: null,
+    fileName: "resume",
   };
 
   for (const arg of args) {
     if (arg.startsWith("--parser=")) {
       result.parserName = arg.substring("--parser=".length);
-    } else if (arg.startsWith("--resume=")) {
-      result.resumeFilePath = arg.substring("--resume=".length);
+    } else if (arg.startsWith("--text=")) {
+      result.text = arg.substring("--text=".length);
+    } else if (arg.startsWith("--file=")) {
+      result.fileName = arg.substring("--file=".length);
     } else if (!arg.startsWith("--")) {
-      // If not a flag and no resume path is set yet, assume it's the resume path
-      if (!result.resumeFilePath) {
-        result.resumeFilePath = arg;
+      // If not a flag and no text is set yet, assume it's the text
+      if (!result.text) {
+        result.text = arg;
       }
     }
   }
@@ -225,17 +197,16 @@ function parseCommandLineArgs() {
 if (require.main === module) {
   const args = parseCommandLineArgs();
 
-  if (!args.resumeFilePath) {
-    console.error("Error: Please provide a path to a resume file");
+  if (!args.text) {
+    console.error("Error: Please provide a text to process");
     console.log(
-      "Usage: node parseOneResume.js [--parser=<parser-name>] --resume=<path-to-resume-file>"
+      "Usage: node parseOneResume.js [--parser=<parser-name>] --text=<text-to-process> [--file=<output-file-name>]"
     );
-    console.log("   or: node parseOneResume.js <path-to-resume-file>");
     process.exit(1);
   }
 
-  const resumeFilePath = path.resolve(args.resumeFilePath);
-  parseOneResume(resumeFilePath, args.parserName).catch((error) => {
+  const text = args.text;
+  parseOneResume(text, args.parserName, args.fileName).catch((error) => {
     console.error("Error:", error);
   });
 }

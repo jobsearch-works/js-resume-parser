@@ -1,0 +1,55 @@
+John Doe
+Software Engineer
+john.doe@email.com | (555) 123-4567 | San Francisco, CA
+linkedin.com/in/johndoe | github.com/johndoe
+
+PROFESSIONAL SUMMARY
+Experienced software engineer with 5+ years of experience in full-stack development, specializing in JavaScript and Python. Passionate about creating efficient, scalable solutions and mentoring junior developers.
+
+EXPERIENCE
+Senior Software Engineer at TechCorp
+San Francisco, CA | Jan 2020 - Present
+• Led development of microservices architecture, reducing system latency by 40%
+• Implemented CI/CD pipeline using Jenkins and Docker
+• Mentored 3 junior developers and conducted code reviews
+
+Software Engineer at StartupX
+San Francisco, CA | Mar 2018 - Dec 2019
+• Developed and maintained React-based frontend applications
+• Built RESTful APIs using Node.js and Express
+• Collaborated with UX team to implement responsive designs
+
+EDUCATION
+Bachelor of Science in Computer Science
+University of California, Berkeley
+2014 - 2018
+• GPA: 3.8/4.0
+• Dean's List all semesters
+
+SKILLS
+• Programming Languages: JavaScript, Python, Java
+• Frontend: React, Angular, Vue.js
+• Backend: Node.js, Express, Django
+• Databases: MongoDB, PostgreSQL
+• Tools: Git, Docker, AWS
+• Other: Agile, Scrum, CI/CD
+
+PROJECTS
+E-commerce Platform (2021 - Present)
+• Built a full-stack e-commerce solution using MERN stack
+• Implemented real-time inventory management
+• Integrated payment processing with Stripe
+
+Task Management App (2020)
+• Developed a collaborative task management tool
+• Used React for frontend and Node.js for backend
+• Implemented real-time updates using Socket.io
+
+CERTIFICATIONS
+• AWS Certified Solutions Architect
+• Certified Scrum Master
+• Google Cloud Professional Developer
+
+LANGUAGES
+• English (Native)
+• Spanish (Professional Working Proficiency) 

@@ -5,10 +5,10 @@ const pdfParse = require("pdf-parse");
 /**
  * A specialized parser for modern student/recent graduate resumes.
  * Focus on better extracting phone numbers, work experience, projects, and honors.
- * @param {string} resumeFilePath - The path to the resume file to parse.
+ * @param {string} text - The resume text to parse.
  * @returns {Object} - An object containing parsed information.
  */
-async function parseStudentFormat(resumeFilePath) {
+async function parseStudentFormat(text) {
   // Initialize parsed data structure
   const parsedData = {
     name: "",
@@ -28,18 +28,6 @@ async function parseStudentFormat(resumeFilePath) {
   };
 
   try {
-    // Read the file content
-    const dataBuffer = fs.readFileSync(resumeFilePath);
-    console.log(`Successfully read file: ${resumeFilePath}`);
-
-    // Parse PDF content
-    const pdfData = await pdfParse(dataBuffer);
-    console.log(`Number of pages: ${pdfData.numpages}`);
-
-    // Extract text content
-    const text = pdfData.text;
-    console.log("Extracted text sample:", text.substring(0, 200) + "...");
-
     // Parse content based on patterns
     const lines = text
       .split("\n")
@@ -95,14 +83,11 @@ async function parseStudentFormat(resumeFilePath) {
     parsedData.honors = parsedData.honors || [];
     // Convert references to array if needed by verification
     if (typeof parsedData.references === "string") {
-      parsedData.references = parsedData.references
-        ? [parsedData.references]
-        : [];
+      parsedData.references = parsedData.references ? [parsedData.references] : [];
     }
 
-    // Note: Verification is now handled separately instead of being included in the parsed data
   } catch (error) {
-    console.error(`Error parsing file: ${error.message}`);
+    console.error(`Error parsing text: ${error.message}`);
   }
 
   return parsedData;

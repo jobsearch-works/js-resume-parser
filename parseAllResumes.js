@@ -7,9 +7,11 @@ const {
 } = require("./verificationUtils");
 
 /**
- * Main function to process all resumes with all available parsers
+ * Main function to process resume text with all available parsers
+ * @param {string} text - The resume text to process
+ * @param {string} [fileName] - Optional name to use for output files
  */
-async function parseAllResumes() {
+async function parseAllResumes(text, fileName = "resume") {
   try {
     // Create the output directories
     const parsedDir = path.join(__dirname, "parsed");
@@ -32,70 +34,40 @@ async function parseAllResumes() {
       }
     }
 
-    // Get all resume files from the resumes directory
-    const resumesDir = path.join(__dirname, "resumes");
-    const files = fs.readdirSync(resumesDir);
-    const pdfFiles = files.filter(
-      (file) =>
-        path.extname(file).toLowerCase() === ".pdf" ||
-        file.toLowerCase().endsWith(".docx.pdf")
-    );
-
-    console.log(`\nFound ${pdfFiles.length} resume files to process`);
+    console.log(`\nProcessing resume text`);
     console.log("--------------------------------------------------");
 
-    // Process each resume file
-    for (const file of pdfFiles) {
-      const filePath = path.join(resumesDir, file);
-      const fileName = path.basename(file, path.extname(file));
-
-      console.log(`\nProcessing: ${file}`);
-      console.log("--------------------------------------------------");
-
-      // Get the original text content for verification
-      let originalText = "";
+    // Process with each parser
+    for (const parser of availableParsers) {
       try {
-        const dataBuffer = fs.readFileSync(filePath);
-        const pdfData = await require("pdf-parse")(dataBuffer);
-        originalText = pdfData.text;
+        console.log(`\n[${parser.displayName.toUpperCase()}]`);
+
+        // Get parser result
+        const result = await parseResume(text, parser.name);
+
+        // Verify content
+        const verificationResults = verifyParsedContent(text, result);
+
+        // Create the parser directory path
+        const parserDir = path.join(parsedDir, `${parser.name}-parser`);
+
+        // Save JSON output
+        const outputPath = path.join(parserDir, `${fileName}.json`);
+        fs.writeFileSync(outputPath, JSON.stringify(result, null, 2));
+        console.log(`${parser.displayName} result saved to: ${outputPath}`);
+
+        // Save verification results separately
+        saveVerificationResults(verificationResults, parserDir, fileName);
+
+        // Log results
+        console.log(`${parser.displayName} extracted:`);
+        logParserResults(result, verificationResults);
       } catch (error) {
-        console.error(`Error reading original text: ${error.message}`);
-        continue;
+        console.error(`Error with ${parser.displayName}: ${error.message}`);
       }
-
-      // Process with each parser
-      for (const parser of availableParsers) {
-        try {
-          console.log(`\n[${parser.displayName.toUpperCase()}]`);
-
-          // Get parser result (no file saving in the parser)
-          const result = await parseResume(filePath, parser.name);
-
-          // Verify content
-          const verificationResults = verifyParsedContent(originalText, result);
-
-          // Create the parser directory path
-          const parserDir = path.join(parsedDir, `${parser.name}-parser`);
-
-          // Save JSON output
-          const outputPath = path.join(parserDir, `${fileName}.json`);
-          fs.writeFileSync(outputPath, JSON.stringify(result, null, 2));
-          console.log(`${parser.displayName} result saved to: ${outputPath}`);
-
-          // Save verification results separately
-          saveVerificationResults(verificationResults, parserDir, fileName);
-
-          // Log results
-          console.log(`${parser.displayName} extracted:`);
-          logParserResults(result, verificationResults);
-        } catch (error) {
-          console.error(`Error with ${parser.displayName}: ${error.message}`);
-        }
-      }
-
-      console.log("--------------------------------------------------");
     }
 
+    console.log("--------------------------------------------------");
     console.log(
       `\nAll results have been saved to separate folders in the 'parsed' directory:`
     );
@@ -176,7 +148,48 @@ function logParserResults(result, verificationResults) {
   }
 }
 
-// Run the main function
-parseAllResumes().catch((error) => {
-  console.error("Error:", error);
-});
+// Parse command line arguments
+function parseCommandLineArgs() {
+  const args = process.argv.slice(2);
+  const result = {
+    text: null,
+    fileName: "resume",
+  };
+
+  for (const arg of args) {
+    if (arg.startsWith("--text=")) {
+      result.text = arg.substring("--text=".length);
+    } else if (arg.startsWith("--file=")) {
+      result.fileName = arg.substring("--file=".length);
+    } else if (!arg.startsWith("--")) {
+      // If not a flag and no text is set yet, assume it's the text
+      if (!result.text) {
+        result.text = arg;
+      }
+    }
+  }
+
+  return result;
+}
+
+// Run the main function if called directly
+if (require.main === module) {
+  const args = parseCommandLineArgs();
+
+  if (!args.text) {
+    console.error("Error: Please provide text to process");
+    console.log(
+      "Usage: node parseAllResumes.js --text=<text-to-process> [--file=<output-file-name>]"
+    );
+    process.exit(1);
+  }
+
+  const text = args.text;
+  parseAllResumes(text, args.fileName).catch((error) => {
+    console.error("Error:", error);
+  });
+}
+
+module.exports = {
+  parseAllResumes,
+};

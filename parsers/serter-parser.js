@@ -4,11 +4,11 @@ const pdfParse = require("pdf-parse");
 
 /**
  * A specialized parser for resumes similar to Serter_I.pdf format.
- * This function will take a resume file path and extract relevant information.
- * @param {string} resumeFilePath - The path to the resume file to parse.
+ * This function will take resume text and extract relevant information.
+ * @param {string} text - The resume text to parse.
  * @returns {Object} - An object containing parsed information.
  */
-async function parseSerterFormat(resumeFilePath) {
+async function parseSerterFormat(text) {
   // Initialize parsed data structure
   const parsedData = {
     name: "",
@@ -27,18 +27,6 @@ async function parseSerterFormat(resumeFilePath) {
   };
 
   try {
-    // Read the file content
-    const dataBuffer = fs.readFileSync(resumeFilePath);
-    console.log(`Successfully read file: ${resumeFilePath}`);
-
-    // Parse PDF content
-    const pdfData = await pdfParse(dataBuffer);
-    console.log(`Number of pages: ${pdfData.numpages}`);
-
-    // Extract text content
-    const text = pdfData.text;
-    console.log("Extracted text sample:", text.substring(0, 200) + "...");
-
     // Parse content based on patterns
     const lines = text
       .split("\n")
@@ -73,9 +61,7 @@ async function parseSerterFormat(resumeFilePath) {
     }
 
     if (sections.certifications) {
-      parsedData.certifications = sections.certifications.map((line) =>
-        line.trim()
-      );
+      parsedData.certifications = sections.certifications.map((line) => line.trim());
     }
 
     if (sections.languages) {
@@ -90,9 +76,8 @@ async function parseSerterFormat(resumeFilePath) {
     parsedData.certifications = parsedData.certifications || [];
     parsedData.languages = parsedData.languages || [];
 
-    // Note: Verification is now handled separately instead of being included in the parsed data
   } catch (error) {
-    console.error(`Error parsing file: ${error.message}`);
+    console.error(`Error parsing text: ${error.message}`);
   }
 
   return parsedData;
